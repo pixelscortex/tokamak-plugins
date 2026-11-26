@@ -1,0 +1,59 @@
+scripts/install.ts
+  s_dfb182bee56360::t_47f177ed1b1b78 1-272
+.gitignore
+  s_dfb182bee56360::t_41031a465c7391 1-6
+.prototools
+  s_dfb182bee56360::t_70450fc5de9dba 1-2
+AGENTS.md
+  s_dfb182bee56360::t_4d4e922d0f9421 1-30
+README.md
+  s_dfb182bee56360::t_89cd05cc2952d4 2-65
+install.sh
+  s_dfb182bee56360::t_e3a918ae91b180 1-17
+package.json
+  s_dfb182bee56360::t_0a1f1b2b40641c 1-12
+plugins/hello/DESIGN.md
+  s_dfb182bee56360::t_3f4ed7dc4ced5e 1-16
+plugins/hello/package.json
+  s_dfb182bee56360::t_624fa53da6b022 1-6
+plugins/hello/plugin.ts
+  s_dfb182bee56360::t_0da2ad67a167d0 1-12
+plugins/hello/src/client/_generated/components.d.ts
+  s_dfb182bee56360::t_188165ea922814 1-7
+plugins/hello/src/client/api.tsx
+  s_dfb182bee56360::t_61a2f7178a89c0 1-25
+plugins/hello/src/client/styles.css
+  s_dfb182bee56360::t_48e30b2224478a 1-4
+plugins/hello/src/client/tsconfig.json
+  s_dfb182bee56360::t_5482c944d3abef 1-4
+plugins/hello/src/server/_generated/api.ts
+  s_dfb182bee56360::t_0abb5fd4b8b1a8 1-10
+plugins/hello/src/server/_generated/internal.ts
+  s_dfb182bee56360::t_f591c27795a158 1-4
+plugins/hello/src/server/greeting.ts
+  s_dfb182bee56360::t_1f2f9e30ce51de 1-15
+plugins/hello/src/server/tsconfig.json
+  s_dfb182bee56360::t_93c5b92ebcf49f 1-4
+plugins/hello/tsconfig.json
+  s_dfb182bee56360::t_3d103d2b1a933d 1-5
+scripts/check.ts
+  s_dfb182bee56360::t_8b23c8151c8f13 1-25
+setup.sh
+  s_dfb182bee56360::t_b2dfe684ac860c 1-57
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "1a4f999121f2b1f1548c69f8bf5f48a6f47025cb",
+  "prompts": {},
+  "sessions": {
+    "s_dfb182bee56360": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "2292553d-f201-491d-b00e-2b4c0f426e72",
+        "model": "claude-opus-5-5"
+      },
+      "human_author": "JustKira <shighgamerhg@gmail.com>"
+    }
+  }
+}

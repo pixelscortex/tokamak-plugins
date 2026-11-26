@@ -1,0 +1,583 @@
+scripts/sync-from-tokamak.sh
+  s_1ab33bdbe49b79::t_0d0e4c6823514a 1-9
+scripts/sync.ts
+  s_1ab33bdbe49b79::t_3a6ebff0f13a45 1-19,21-23,26-31,33-136
+  s_1ab33bdbe49b79::t_4a60daacd5d253 32
+  s_1ab33bdbe49b79::t_33c8d9cd885fd6 20,24-25
+plugins/agent-proxy/DESIGN.md
+  s_1ab33bdbe49b79::t_8779dc94c114af 1-191
+plugins/agent-proxy/README.md
+  s_1ab33bdbe49b79::t_ac84a5d97cfd38 1-437
+plugins/agent-proxy/package.json
+  s_1ab33bdbe49b79::t_fccf5ed92afb3c 1-15
+plugins/agent-proxy/plugin.ts
+  s_1ab33bdbe49b79::t_6bae71bdedbf35 1-16
+plugins/agent-proxy/src/server/_functions.ts
+  s_1ab33bdbe49b79::t_f34dabcb17dba2 1-145
+plugins/agent-proxy/src/server/_generated/api.ts
+  s_1ab33bdbe49b79::t_8fc195d00a26d1 1-4
+plugins/agent-proxy/src/server/_generated/internal.ts
+  s_1ab33bdbe49b79::t_865e6f6c68e04a 1-60
+plugins/agent-proxy/src/server/_generated/plugin.ts
+  s_1ab33bdbe49b79::t_deebc76ae55eeb 1-46
+plugins/agent-proxy/src/server/addresses.ts
+  s_1ab33bdbe49b79::t_d1743a1667fc8d 1-57
+plugins/agent-proxy/src/server/api.ts
+  s_1ab33bdbe49b79::t_69f18231696069 1-10
+plugins/agent-proxy/src/server/claude.ts
+  s_1ab33bdbe49b79::t_57756063084728 1-298
+plugins/agent-proxy/src/server/companies.ts
+  s_1ab33bdbe49b79::t_f85ef5c5008fd8 1-8
+plugins/agent-proxy/src/server/company.ts
+  s_1ab33bdbe49b79::t_cda2c84fcdd49d 1-124
+plugins/agent-proxy/src/server/logins.ts
+  s_1ab33bdbe49b79::t_3b81054ff9e466 1-260
+plugins/agent-proxy/src/server/manage.ts
+  s_1ab33bdbe49b79::t_75eb81cbe4d3fa 1-398
+plugins/agent-proxy/src/server/openai.ts
+  s_1ab33bdbe49b79::t_13a9c5b09dd8d1 1-466
+plugins/agent-proxy/src/server/pkce.ts
+  s_1ab33bdbe49b79::t_769c3fe41df783 1-78
+plugins/agent-proxy/src/server/proxy.ts
+  s_1ab33bdbe49b79::t_d41cc41338cfc2 1-311
+plugins/agent-proxy/src/server/reads.ts
+  s_1ab33bdbe49b79::t_0bc868665863ff 1-61
+plugins/agent-proxy/src/server/schema.ts
+  s_1ab33bdbe49b79::t_780f22ecb44899 1-127
+plugins/agent-proxy/src/server/sets.ts
+  s_1ab33bdbe49b79::t_e852eb0850fc27 1-265
+plugins/agent-proxy/src/server/signins.ts
+  s_1ab33bdbe49b79::t_3f6afd42af9e4c 1-429
+plugins/agent-proxy/src/server/subscriptions.ts
+  s_1ab33bdbe49b79::t_fe248729b70cc4 1-120
+plugins/agent-proxy/tests/claude.test.ts
+  s_1ab33bdbe49b79::t_513edfa0c23fce 1-74
+plugins/agent-proxy/tests/fake-companies.test.ts
+  s_1ab33bdbe49b79::t_4a6b150463714c 1-328
+plugins/agent-proxy/tests/fake-companies/index.ts
+  s_1ab33bdbe49b79::t_ef04f39498fcd9 1-542
+plugins/agent-proxy/tests/fake-companies/oauth.ts
+  s_1ab33bdbe49b79::t_44c04d9f03cdc2 1-81
+plugins/agent-proxy/tests/fake-companies/record.ts
+  s_1ab33bdbe49b79::t_4cd646a65fefe2 1-75
+plugins/agent-proxy/tests/fake-companies/recorder.ts
+  s_1ab33bdbe49b79::t_45859f26631f38 1-199
+plugins/agent-proxy/tests/fake-companies/stream.ts
+  s_1ab33bdbe49b79::t_8f83e8234588f4 1-130
+plugins/agent-proxy/tests/openai.test.ts
+  s_1ab33bdbe49b79::t_9429e102f6131d 1-177
+plugins/agent-proxy/tests/plan-known.test.ts
+  s_1ab33bdbe49b79::t_9b18f433048e33 1-81
+plugins/agent-proxy/tsconfig.json
+  s_1ab33bdbe49b79::t_90678cc465425d 1-5
+plugins/ai-profiles/DESIGN.md
+  s_1ab33bdbe49b79::t_84cdbae4cc5319 1-397
+plugins/ai-profiles/README.md
+  s_1ab33bdbe49b79::t_c27931b39c1966 1-60
+plugins/ai-profiles/package.json
+  s_1ab33bdbe49b79::t_2d499bf6fb43ee 1-24
+plugins/ai-profiles/plugin.ts
+  s_1ab33bdbe49b79::t_a58297cf69bc3b 1-10
+plugins/ai-profiles/src/client/_generated/components.d.ts
+  s_1ab33bdbe49b79::t_0b60a8ba36535f 1-207
+plugins/ai-profiles/src/client/api.tsx
+  s_1ab33bdbe49b79::t_63d0cfd91f7275 1-24
+plugins/ai-profiles/src/client/lib/api.ts
+  s_1ab33bdbe49b79::t_b323a27224f4b6 1-25
+plugins/ai-profiles/src/client/lib/builder.ts
+  s_1ab33bdbe49b79::t_d5279a22f25fbf 1-215
+plugins/ai-profiles/src/client/lib/companies.ts
+  s_1ab33bdbe49b79::t_4b4b2c681fcb66 1-56
+plugins/ai-profiles/src/client/lib/desktop.ts
+  s_1ab33bdbe49b79::t_bae27caafcda96 1-39
+plugins/ai-profiles/src/client/lib/drag.ts
+  s_1ab33bdbe49b79::t_4da9ff69bd28af 1-126
+plugins/ai-profiles/src/client/lib/format.ts
+  s_1ab33bdbe49b79::t_38f614a34068cb 1-50
+plugins/ai-profiles/src/client/lib/icons.ts
+  s_1ab33bdbe49b79::t_b76e9cf9d6c891 1-22
+plugins/ai-profiles/src/client/lib/manage.ts
+  s_1ab33bdbe49b79::t_2f7e9a4c943ba2 1-33
+plugins/ai-profiles/src/client/lib/profile-icons.ts
+  s_1ab33bdbe49b79::t_bbda9ba6607e50 1-10
+plugins/ai-profiles/src/client/lib/sign-in-return.ts
+  s_1ab33bdbe49b79::t_ec38a578df7749 1-102
+plugins/ai-profiles/src/client/lib/sign-in-watch.ts
+  s_1ab33bdbe49b79::t_895cf431e32154 1-141
+plugins/ai-profiles/src/client/pages/profiles.tsx
+  s_1ab33bdbe49b79::t_08d730bba7bd4e 1-306
+plugins/ai-profiles/src/client/pages/subscription.tsx
+  s_1ab33bdbe49b79::t_994179f618a49d 1-370
+plugins/ai-profiles/src/client/styles.css
+  s_1ab33bdbe49b79::t_d8d8ec886d58ba 1-17
+plugins/ai-profiles/src/client/tsconfig.json
+  s_1ab33bdbe49b79::t_0ca7a7849d7df7 1-12
+plugins/ai-profiles/src/client/ui/add-dialog.tsx
+  s_1ab33bdbe49b79::t_91a4edd43ffe7a 1-468
+plugins/ai-profiles/src/client/ui/card-actions.tsx
+  s_1ab33bdbe49b79::t_e9456228f2f2a2 1-99
+plugins/ai-profiles/src/client/ui/card-profiles.tsx
+  s_1ab33bdbe49b79::t_92a1d38d26782a 1-97
+plugins/ai-profiles/src/client/ui/company-mark.tsx
+  s_1ab33bdbe49b79::t_07e78de118d066 1-104
+plugins/ai-profiles/src/client/ui/profile-box.tsx
+  s_1ab33bdbe49b79::t_d36c609bfc0b4a 1-193
+plugins/ai-profiles/src/client/ui/profile-dialog.tsx
+  s_1ab33bdbe49b79::t_23e51d82f7ed2b 1-115
+plugins/ai-profiles/src/client/ui/profiles-section.tsx
+  s_1ab33bdbe49b79::t_f9c408590bd757 1-103
+plugins/ai-profiles/src/client/ui/remove-dialog.tsx
+  s_1ab33bdbe49b79::t_2cd1b345d3ae24 1-94
+plugins/ai-profiles/src/client/ui/subscription-card.tsx
+  s_1ab33bdbe49b79::t_c82fd5b8bd1651 1-160
+plugins/ai-profiles/src/client/ui/thread-profile.tsx
+  s_1ab33bdbe49b79::t_8dec0ba83cae2e 1-164
+plugins/ai-profiles/src/server/_generated/api.ts
+  s_1ab33bdbe49b79::t_54292d497173bd 1-56
+plugins/ai-profiles/src/server/_generated/internal.ts
+  s_1ab33bdbe49b79::t_619ec7f36cd5ac 1-16
+plugins/ai-profiles/src/server/manage.ts
+  s_1ab33bdbe49b79::t_e59f17df159a53 1-71
+plugins/ai-profiles/src/server/profile-uses.ts
+  s_1ab33bdbe49b79::t_dd8bb9a36dd8fe 1-44
+plugins/ai-profiles/src/server/profiles.ts
+  s_1ab33bdbe49b79::t_f623a50d36af66 1-380
+plugins/ai-profiles/src/server/schema.ts
+  s_1ab33bdbe49b79::t_13d41912d75076 1-44
+plugins/ai-profiles/src/server/subscriptions.ts
+  s_1ab33bdbe49b79::t_ada493e6bf4eea 1-67
+plugins/ai-profiles/src/server/thread-profiles.ts
+  s_1ab33bdbe49b79::t_936f916087a0f8 1-99
+plugins/ai-profiles/src/server/tsconfig.json
+  s_1ab33bdbe49b79::t_e373197746fbf6 1-5
+plugins/ai-profiles/src/server/turn-profile.ts
+  s_1ab33bdbe49b79::t_2fc201b21573bf 1-129
+plugins/ai-profiles/tests/chatgpt.test.tsx
+  s_1ab33bdbe49b79::t_39998110f457b5 1-257
+plugins/ai-profiles/tests/desktop-listener.test.tsx
+  s_1ab33bdbe49b79::t_cbc0102ef67903 1-194
+plugins/ai-profiles/tests/desktop-returns.test.tsx
+  s_1ab33bdbe49b79::t_e68ef798c29643 1-240
+plugins/ai-profiles/tests/desktop-sign-in.test.tsx
+  s_1ab33bdbe49b79::t_636994c8c5ff64 1-248
+plugins/ai-profiles/tests/list-identity.test.tsx
+  s_1ab33bdbe49b79::t_26644c83561c3e 1-138
+plugins/ai-profiles/tests/manage.test.tsx
+  s_1ab33bdbe49b79::t_63969511d0aec7 1-337
+plugins/ai-profiles/tests/profiles-section.test.tsx
+  s_1ab33bdbe49b79::t_bcfc114e4ad1cb 1-465
+plugins/ai-profiles/tests/profiles.test.tsx
+  s_1ab33bdbe49b79::t_73caf16edc4b95 1-332
+plugins/ai-profiles/tests/tsconfig.json
+  s_1ab33bdbe49b79::t_35f3e9246c0ab3 1-8
+plugins/ai-profiles/tests/vitest.config.ts
+  s_1ab33bdbe49b79::t_7af87410cdac07 1-15
+plugins/ai-profiles/tests/window-state.ts
+  s_1ab33bdbe49b79::t_6566fef80d0739 1-20
+plugins/ai-profiles/tsconfig.json
+  s_1ab33bdbe49b79::t_0609901baf85ae 1-5
+plugins/ai/DESIGN.md
+  s_1ab33bdbe49b79::t_26b61bcfa87fde 1-190
+plugins/ai/README.md
+  s_1ab33bdbe49b79::t_1c46ab17cb4904 1-213
+plugins/ai/package.json
+  s_1ab33bdbe49b79::t_90288de13e8337 1-26
+plugins/ai/plugin.ts
+  s_1ab33bdbe49b79::t_15f09403707af2 1-11
+plugins/ai/src/client/_generated/components.d.ts
+  s_1ab33bdbe49b79::t_5b0ee5d84f23f1 1-149
+plugins/ai/src/client/api.tsx
+  s_1ab33bdbe49b79::t_5c975e785e7163 1-72
+plugins/ai/src/client/lib/agents.ts
+  s_1ab33bdbe49b79::t_b58c4567d87b90 1-173
+plugins/ai/src/client/lib/choices.ts
+  s_1ab33bdbe49b79::t_587c64adb93f5b 1-163
+plugins/ai/src/client/lib/icons.ts
+  s_1ab33bdbe49b79::t_af328dbd714173 1-44
+plugins/ai/src/client/lib/kinds.ts
+  s_1ab33bdbe49b79::t_af60f433258db4 1-12
+plugins/ai/src/client/lib/local-turn.ts
+  s_1ab33bdbe49b79::t_88e7c65aa5f9ff 1-26
+plugins/ai/src/client/lib/questions.ts
+  s_1ab33bdbe49b79::t_456acc2e74e4a2 1-73
+plugins/ai/src/client/lib/queue.ts
+  s_1ab33bdbe49b79::t_f7275e0ed7e6dc 1-107
+plugins/ai/src/client/lib/quit.ts
+  s_1ab33bdbe49b79::t_05c444ca0d858d 1-40
+plugins/ai/src/client/lib/release.ts
+  s_1ab33bdbe49b79::t_ffe49acbb90848 1-24
+plugins/ai/src/client/lib/replies.ts
+  s_1ab33bdbe49b79::t_7e6d78a523efbd 1-143
+plugins/ai/src/client/lib/steers.ts
+  s_1ab33bdbe49b79::t_be8e2769f11c64 1-74
+plugins/ai/src/client/lib/thread-status.ts
+  s_1ab33bdbe49b79::t_af5bdefda30299 1-91
+plugins/ai/src/client/lib/turn-controls.ts
+  s_1ab33bdbe49b79::t_84499e3c5cdc36 1-92
+plugins/ai/src/client/lib/turn.ts
+  s_1ab33bdbe49b79::t_05a9cbd25ae493 1-97
+plugins/ai/src/client/lib/window-actions.ts
+  s_1ab33bdbe49b79::t_0bb0de1b9d88f8 1-29
+plugins/ai/src/client/styles.css
+  s_1ab33bdbe49b79::t_e5739e68922140 1-12
+plugins/ai/src/client/tsconfig.json
+  s_1ab33bdbe49b79::t_e280f603c3c79f 1-13
+plugins/ai/src/client/ui/agent-mark.tsx
+  s_1ab33bdbe49b79::t_873f5b341542a2 1-89
+plugins/ai/src/client/ui/agent-picker.tsx
+  s_1ab33bdbe49b79::t_e6a9a8d5887ed0 1-304
+plugins/ai/src/client/ui/agent-row.tsx
+  s_1ab33bdbe49b79::t_160e4b2aef9aab 1-247
+plugins/ai/src/client/ui/permission-card.tsx
+  s_1ab33bdbe49b79::t_e72aef1a6c27e8 1-133
+plugins/ai/src/client/ui/reply-cards.tsx
+  s_1ab33bdbe49b79::t_3dc40270da639e 1-111
+plugins/ai/src/client/ui/reply-header.tsx
+  s_1ab33bdbe49b79::t_ff1f717784fe27 1-32
+plugins/ai/src/client/ui/reply-work.tsx
+  s_1ab33bdbe49b79::t_122289c594000b 1-211
+plugins/ai/src/client/ui/spinning.tsx
+  s_1ab33bdbe49b79::t_62f92192ca5b74 1-11
+plugins/ai/src/client/ui/thread-status.tsx
+  s_1ab33bdbe49b79::t_15615b7da488ac 1-97
+plugins/ai/src/client/ui/turn-controls.tsx
+  s_1ab33bdbe49b79::t_9de6c571739db4 1-61
+plugins/ai/src/client/ui/turn-steers.tsx
+  s_1ab33bdbe49b79::t_92ff70be148d3f 1-65
+plugins/ai/src/contracts.ts
+  s_1ab33bdbe49b79::t_7ad1e8ed0b5727 1-113
+plugins/ai/src/server/_functions.ts
+  s_1ab33bdbe49b79::t_5a0fd51b519034 1-61
+plugins/ai/src/server/_generated/api.ts
+  s_1ab33bdbe49b79::t_1cd331f4054c27 1-100
+plugins/ai/src/server/_generated/internal.ts
+  s_1ab33bdbe49b79::t_43718de5449ef1 1-10
+plugins/ai/src/server/_steps.ts
+  s_1ab33bdbe49b79::t_3915c239d0af1d 1-57
+plugins/ai/src/server/agent-turn.ts
+  s_1ab33bdbe49b79::t_d3c96631a4a091 1-194
+plugins/ai/src/server/agents.ts
+  s_1ab33bdbe49b79::t_abbd5419058080 1-102
+plugins/ai/src/server/api.ts
+  s_1ab33bdbe49b79::t_7c0c1d5d15ec3e 1-3
+plugins/ai/src/server/choices.ts
+  s_1ab33bdbe49b79::t_81e89f38100558 1-71
+plugins/ai/src/server/controls.ts
+  s_1ab33bdbe49b79::t_a3e4b8883daa88 1-173
+plugins/ai/src/server/keep-alive.ts
+  s_1ab33bdbe49b79::t_776ef4ffbfc1e5 1-49
+plugins/ai/src/server/launch-args.ts
+  s_1ab33bdbe49b79::t_4660d9ec86a04e 1-106
+plugins/ai/src/server/limits.ts
+  s_1ab33bdbe49b79::t_d09271919aafe8 1
+plugins/ai/src/server/liveness.ts
+  s_1ab33bdbe49b79::t_7bce751a17d3ee 1-212
+plugins/ai/src/server/questions.ts
+  s_1ab33bdbe49b79::t_2425c2207fdbd9 1-137
+plugins/ai/src/server/run.ts
+  s_1ab33bdbe49b79::t_971fe3b4773c35 1-674
+plugins/ai/src/server/schema.ts
+  s_1ab33bdbe49b79::t_a64dbd87ac4ea0 1-235
+plugins/ai/src/server/thread-deleted-local.ts
+  s_1ab33bdbe49b79::t_5de83abda3eb2c 1-11
+plugins/ai/src/server/thread-deleted.ts
+  s_1ab33bdbe49b79::t_b08bef0a879547 1-33
+plugins/ai/src/server/threads.ts
+  s_1ab33bdbe49b79::t_76fad7d643c505 1-46
+plugins/ai/src/server/tsconfig.json
+  s_1ab33bdbe49b79::t_09e6cc34630415 1-5
+plugins/ai/src/server/turn-hooks.ts
+  s_1ab33bdbe49b79::t_5f2fab6b9f98f9 1-126
+plugins/ai/src/server/turns.ts
+  s_1ab33bdbe49b79::t_3204cc1689c69a 1-753
+plugins/ai/src/server/working.ts
+  s_1ab33bdbe49b79::t_adc6f922733226 1-81
+plugins/ai/src/shared/icon.ts
+  s_1ab33bdbe49b79::t_ebcfa477ed48f3 1-5
+plugins/ai/src/shared/offered.ts
+  s_1ab33bdbe49b79::t_5db0dc9035a22b 1-43
+plugins/ai/src/shared/turn-shared.ts
+  s_1ab33bdbe49b79::t_c7f0a046c86700 1-41
+plugins/ai/src/shared/turn-timing.ts
+  s_1ab33bdbe49b79::t_600f4fa18a963c 1-13
+plugins/ai/tests/agent-mark.test.tsx
+  s_1ab33bdbe49b79::t_0dad487bbade49 1-88
+plugins/ai/tests/agent-turn.test.ts
+  s_1ab33bdbe49b79::t_ea5441125e1d8f 1-230
+plugins/ai/tests/keep-alive.test.ts
+  s_1ab33bdbe49b79::t_379f160deb4ce0 1-52
+plugins/ai/tests/local-turn.test.ts
+  s_1ab33bdbe49b79::t_0039afa8581a73 1-22
+plugins/ai/tests/steers.test.tsx
+  s_1ab33bdbe49b79::t_404b229e091e8b 1-140
+plugins/ai/tests/tsconfig.json
+  s_1ab33bdbe49b79::t_b0a7f8bd5b1d39 1-8
+plugins/ai/tests/vitest.config.ts
+  s_1ab33bdbe49b79::t_44eefd738e53ce 1-10
+plugins/ai/tests/window-state.ts
+  s_1ab33bdbe49b79::t_bea5347ba330c4 1-20
+plugins/ai/tsconfig.json
+  s_1ab33bdbe49b79::t_a9cd72250b74b1 1-5
+plugins/basic-auth/package.json
+  s_1ab33bdbe49b79::t_99d307cb588881 1-9
+plugins/basic-auth/plugin.ts
+  s_1ab33bdbe49b79::t_d228de3362e9dc 1-10
+plugins/basic-auth/src/server/_generated/api.ts
+  s_1ab33bdbe49b79::t_f23d9c51df864c 1-4
+plugins/basic-auth/src/server/_generated/internal.ts
+  s_1ab33bdbe49b79::t_8e5c533c975b09 1-24
+plugins/basic-auth/src/server/accounts.ts
+  s_1ab33bdbe49b79::t_daf384a2a470ef 1-184
+plugins/basic-auth/src/server/credentials.ts
+  s_1ab33bdbe49b79::t_d2e6b696492614 1-2
+plugins/basic-auth/src/server/method.ts
+  s_1ab33bdbe49b79::t_5bad4dc05e598a 1-52
+plugins/basic-auth/src/server/schema.ts
+  s_1ab33bdbe49b79::t_62c4c05906eb2d 1-14
+plugins/basic-auth/src/server/tsconfig.json
+  s_1ab33bdbe49b79::t_fbead8d7ef9182 1-9
+plugins/chat/DESIGN.md
+  s_1ab33bdbe49b79::t_af59273113302d 1-102
+plugins/chat/README.md
+  s_1ab33bdbe49b79::t_88fcb9554f1556 1-107
+plugins/chat/package.json
+  s_1ab33bdbe49b79::t_9a545267d33a2b 1-28
+plugins/chat/plugin.ts
+  s_1ab33bdbe49b79::t_ca2b43e9c59a35 1-9
+plugins/chat/src/client/_generated/components.d.ts
+  s_1ab33bdbe49b79::t_4fe59e3b565ba0 1-110
+plugins/chat/src/client/api.ts
+  s_1ab33bdbe49b79::t_5c1583fd77c00d 1-15
+plugins/chat/src/client/lib/api.ts
+  s_1ab33bdbe49b79::t_69c621b115048c 1-8
+plugins/chat/src/client/lib/folders.ts
+  s_1ab33bdbe49b79::t_66cd941d6964fc 1-13
+plugins/chat/src/client/lib/follow.ts
+  s_1ab33bdbe49b79::t_a785d19c3adf64 1-60
+plugins/chat/src/client/lib/hold.ts
+  s_1ab33bdbe49b79::t_f383f7c0c54d87 1-29
+plugins/chat/src/client/lib/icons.ts
+  s_1ab33bdbe49b79::t_e93626a536f3b7 1-26
+plugins/chat/src/client/lib/send.ts
+  s_1ab33bdbe49b79::t_cef847307a02ba 1-57
+plugins/chat/src/client/lib/sent.ts
+  s_1ab33bdbe49b79::t_477f8e455368f2 1-65
+plugins/chat/src/client/lib/state.ts
+  s_1ab33bdbe49b79::t_80852bbaed7453 1-36
+plugins/chat/src/client/lib/time.ts
+  s_1ab33bdbe49b79::t_5961570534fc39 1-25
+plugins/chat/src/client/pages/chat.tsx
+  s_1ab33bdbe49b79::t_3351e5e6ec054b 1-234
+plugins/chat/src/client/styles.css
+  s_1ab33bdbe49b79::t_11d44af436d413 1-4
+plugins/chat/src/client/tsconfig.json
+  s_1ab33bdbe49b79::t_68075ebced8d3f 1-7
+plugins/chat/src/client/ui/composer.tsx
+  s_1ab33bdbe49b79::t_36692defb39f9b 1-82
+plugins/chat/src/client/ui/empty.tsx
+  s_1ab33bdbe49b79::t_46fddd364ece6a 1-177
+plugins/chat/src/client/ui/message.tsx
+  s_1ab33bdbe49b79::t_45be57bfe945e4 1-68
+plugins/chat/src/client/ui/thread-header.tsx
+  s_1ab33bdbe49b79::t_2621010c00090b 1-177
+plugins/chat/src/client/ui/thread-list.tsx
+  s_1ab33bdbe49b79::t_831c2c975a3aa1 1-80
+plugins/chat/src/contracts.ts
+  s_1ab33bdbe49b79::t_b8a79325f15afd 1-30
+plugins/chat/src/server/_functions.ts
+  s_1ab33bdbe49b79::t_d9a1a0dc44d4b1 1-30
+plugins/chat/src/server/_generated/api.ts
+  s_1ab33bdbe49b79::t_26649628d1dea9 1-38
+plugins/chat/src/server/_generated/internal.ts
+  s_1ab33bdbe49b79::t_d81e5e66de020c 1-4
+plugins/chat/src/server/_generated/plugin.ts
+  s_1ab33bdbe49b79::t_e5806e59925366 1-22
+plugins/chat/src/server/api.ts
+  s_1ab33bdbe49b79::t_9ef0853959a6d8 1-17
+plugins/chat/src/server/folders/folder.ts
+  s_1ab33bdbe49b79::t_53e6eac0a5f0c6 1-8
+plugins/chat/src/server/folders/folders.ts
+  s_1ab33bdbe49b79::t_f40691756141d9 1-81
+plugins/chat/src/server/messages/_tail.ts
+  s_1ab33bdbe49b79::t_1638daf93153f0 1-25
+plugins/chat/src/server/messages/messages.ts
+  s_1ab33bdbe49b79::t_dcff15c134e343 1-156
+plugins/chat/src/server/messages/parts.ts
+  s_1ab33bdbe49b79::t_a1ffd3f59a03c6 1-46
+plugins/chat/src/server/replies/replies.ts
+  s_1ab33bdbe49b79::t_58525268d59680 1-71
+plugins/chat/src/server/schema.ts
+  s_1ab33bdbe49b79::t_3bc078e890645d 1-52
+plugins/chat/src/server/threads/threads.ts
+  s_1ab33bdbe49b79::t_277caed5445a6e 1-189
+plugins/chat/src/server/tsconfig.json
+  s_1ab33bdbe49b79::t_6b56d19526ac4f 1-5
+plugins/chat/src/shared/text.ts
+  s_1ab33bdbe49b79::t_ef11dfbafe7ecf 1-10
+plugins/chat/tests/chat-probe.d.ts
+  s_1ab33bdbe49b79::t_b40ab184fd52a2 1-7
+plugins/chat/tests/extensions.test.tsx
+  s_1ab33bdbe49b79::t_39c7d3f50ffde4 1-366
+plugins/chat/tests/fixtures/chat-probe/package.json
+  s_1ab33bdbe49b79::t_b8e3fff9138ebe 1-6
+plugins/chat/tests/fixtures/chat-probe/plugin.ts
+  s_1ab33bdbe49b79::t_32e41855ba28fc 1-2
+plugins/chat/tests/fixtures/chat-probe/src/client/api.tsx
+  s_1ab33bdbe49b79::t_e11202ad242883 1-81
+plugins/chat/tests/fixtures/schema-before-local-turns.ts
+  s_1ab33bdbe49b79::t_70a5cba336410e 1-59
+plugins/chat/tests/send.test.ts
+  s_1ab33bdbe49b79::t_fd0007e678a634 1-80
+plugins/chat/tests/tsconfig.json
+  s_1ab33bdbe49b79::t_e07bfb1cf88030 1-9
+plugins/chat/tests/vitest.config.ts
+  s_1ab33bdbe49b79::t_16e93d8ba52d02 1-59
+plugins/chat/tests/window-state.ts
+  s_1ab33bdbe49b79::t_d0c2c00e97b468 1-5
+plugins/chat/tsconfig.json
+  s_1ab33bdbe49b79::t_3de22e60ed930d 1-5
+plugins/chat/vitest.config.ts
+  s_1ab33bdbe49b79::t_96e4c543472e2a 1-2
+plugins/claude/DESIGN.md
+  s_1ab33bdbe49b79::t_f26b4caf2a9f32 1-46
+plugins/claude/README.md
+  s_1ab33bdbe49b79::t_3ba9d595b33cfc 1-27
+plugins/claude/package.json
+  s_1ab33bdbe49b79::t_c6e87f31deb280 1-9
+plugins/claude/plugin.ts
+  s_1ab33bdbe49b79::t_54a7ac82f2f48a 1-3
+plugins/claude/src/server/_generated/api.ts
+  s_1ab33bdbe49b79::t_e3976eee13c4b1 1-4
+plugins/claude/src/server/_generated/internal.ts
+  s_1ab33bdbe49b79::t_f3ec209503f180 1-4
+plugins/claude/src/server/agent.ts
+  s_1ab33bdbe49b79::t_05b2e8601c4293 1-165
+plugins/claude/src/server/events.ts
+  s_1ab33bdbe49b79::t_75d5bf4556c91d 1-293
+plugins/claude/src/server/icons/LICENSE.md
+  s_1ab33bdbe49b79::t_d3ba909e749e8a 1-30
+plugins/claude/src/server/icons/claude.svg
+  s_1ab33bdbe49b79::t_5000f6308bfe13 1
+plugins/claude/src/server/permissions.ts
+  s_1ab33bdbe49b79::t_763b72141dfd72 1-142
+plugins/claude/src/server/svg.d.ts
+  s_1ab33bdbe49b79::t_1b361fdbd820d5 1-5
+plugins/claude/src/server/tsconfig.json
+  s_1ab33bdbe49b79::t_9cbbd03244560c 1-10
+plugins/claude/src/server/turn.ts
+  s_1ab33bdbe49b79::t_732b8449e6bdd3 1-222
+plugins/claude/src/server/wire.ts
+  s_1ab33bdbe49b79::t_ab786a0e7345f8 1-175
+plugins/code/DESIGN.md
+  s_1ab33bdbe49b79::t_4edfdef56ad2ef 1-72
+plugins/code/README.md
+  s_1ab33bdbe49b79::t_25776ad9523f06 1-56
+plugins/code/contracts/ai.ts
+  s_1ab33bdbe49b79::t_974c4ca08bc15a 1-113
+plugins/code/package.json
+  s_1ab33bdbe49b79::t_0d073d9fbff793 1-21
+plugins/code/plugin.ts
+  s_1ab33bdbe49b79::t_67c22d0219d76b 1-11
+plugins/code/src/client/_generated/components.d.ts
+  s_1ab33bdbe49b79::t_c605501c444def 1-50
+plugins/code/src/client/api.tsx
+  s_1ab33bdbe49b79::t_9efe478bf1f3ba 1-133
+plugins/code/src/client/lib/changes.ts
+  s_1ab33bdbe49b79::t_dc97154616ec7c 1-245
+plugins/code/src/client/lib/icons.ts
+  s_1ab33bdbe49b79::t_a7fc50dd0d9125 1-13
+plugins/code/src/client/lib/runner.ts
+  s_1ab33bdbe49b79::t_03174bbc2bf940 1-85
+plugins/code/src/client/styles.css
+  s_1ab33bdbe49b79::t_42b614456dc099 1-4
+plugins/code/src/client/tsconfig.json
+  s_1ab33bdbe49b79::t_dd2706c01b1cb3 1-11
+plugins/code/src/client/ui/change-card.tsx
+  s_1ab33bdbe49b79::t_c0b0882728f7e5 1-77
+plugins/code/src/client/ui/counts.tsx
+  s_1ab33bdbe49b79::t_4b8d89d7035b55 1-33
+plugins/code/src/client/ui/review-panel.tsx
+  s_1ab33bdbe49b79::t_d928c6d451ab29 1-267
+plugins/code/src/client/ui/thread-header.tsx
+  s_1ab33bdbe49b79::t_72b696779859ba 1-77
+plugins/code/src/local/changes.ts
+  s_1ab33bdbe49b79::t_f2637bb98f492f 1-304
+plugins/code/src/local/git.ts
+  s_1ab33bdbe49b79::t_753e9d32bda43e 1-396
+plugins/code/src/local/snapshots.ts
+  s_1ab33bdbe49b79::t_7a3c30d83c0aad 1-131
+plugins/code/src/server/_generated/api.ts
+  s_1ab33bdbe49b79::t_8bf068f168d1aa 1-22
+plugins/code/src/server/_generated/internal.ts
+  s_1ab33bdbe49b79::t_cb2d1ec0be5f99 1-4
+plugins/code/src/server/changes.ts
+  s_1ab33bdbe49b79::t_58ac28b219d886 1-65
+plugins/code/src/server/hooks.ts
+  s_1ab33bdbe49b79::t_7a2bbc60f322eb 1-82
+plugins/code/src/server/notices.ts
+  s_1ab33bdbe49b79::t_ae2aeefdd58bbe 1-15
+plugins/code/src/server/tsconfig.json
+  s_1ab33bdbe49b79::t_463b9a2317819d 1-5
+plugins/code/src/shared/text.ts
+  s_1ab33bdbe49b79::t_626c795382f28c 1-6
+plugins/code/tests/runner.test.tsx
+  s_1ab33bdbe49b79::t_92d16c27e03704 1-142
+plugins/code/tests/tsconfig.json
+  s_1ab33bdbe49b79::t_6cd263bfc1c8db 1-5
+plugins/code/tests/vitest.config.ts
+  s_1ab33bdbe49b79::t_dae5f9558ed641 1-16
+plugins/code/tests/window-state.ts
+  s_1ab33bdbe49b79::t_ecf8ae21a92e29 1-5
+plugins/code/tsconfig.json
+  s_1ab33bdbe49b79::t_5cd6ee32d55d8c 1-5
+plugins/codex/DESIGN.md
+  s_1ab33bdbe49b79::t_fc9fffcfca0d10 1-44
+plugins/codex/README.md
+  s_1ab33bdbe49b79::t_4e565aee9adae2 1-51
+plugins/codex/package.json
+  s_1ab33bdbe49b79::t_2cd194d28ce547 1-12
+plugins/codex/plugin.ts
+  s_1ab33bdbe49b79::t_41f953675b7501 1-9
+plugins/codex/src/server/_generated/api.ts
+  s_1ab33bdbe49b79::t_e5877d01b5a6f4 1-4
+plugins/codex/src/server/_generated/internal.ts
+  s_1ab33bdbe49b79::t_3b6bd90f2938a3 1-4
+plugins/codex/src/server/agent.ts
+  s_1ab33bdbe49b79::t_882e6a8da66064 1-64
+plugins/codex/src/server/approvals.ts
+  s_1ab33bdbe49b79::t_08910e5f140145 1-105
+plugins/codex/src/server/helpers.ts
+  s_1ab33bdbe49b79::t_1c525703e76f0b 1-119
+plugins/codex/src/server/icons/LICENSE.md
+  s_1ab33bdbe49b79::t_e3a72b0c4dceda 1-30
+plugins/codex/src/server/icons/openai.svg
+  s_1ab33bdbe49b79::t_6edb909304c3e4 1
+plugins/codex/src/server/info.ts
+  s_1ab33bdbe49b79::t_ec552dece3da4d 1-110
+plugins/codex/src/server/reports.ts
+  s_1ab33bdbe49b79::t_ae1772c0806ee4 1-190
+plugins/codex/src/server/rpc.ts
+  s_1ab33bdbe49b79::t_2afef6641d4bf4 1-157
+plugins/codex/src/server/svg.d.ts
+  s_1ab33bdbe49b79::t_a4298b9999b907 1-5
+plugins/codex/src/server/tsconfig.json
+  s_1ab33bdbe49b79::t_01b95fd8413742 1-9
+plugins/codex/src/server/turn.ts
+  s_1ab33bdbe49b79::t_eb89909f820d01 1-231
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "f6dc4800a69403be285421eeea9329eaabe5d030",
+  "prompts": {},
+  "sessions": {
+    "s_1ab33bdbe49b79": {
+      "agent_id": {
+        "tool": "codex",
+        "id": "01a219f4-edcf-79e2-b46a-21d168a97b66",
+        "model": "gpt-6.2-sol"
+      },
+      "human_author": "JustKira <shighgamerhg@gmail.com>"
+    }
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "name": "tokamak-plugins",
+  "private": true,
+  "type": "module",
+  "workspaces": [
+    "plugins/*"
+  ],
+  "scripts": {
+    "setup": "./setup.sh",
+    "check": "bun scripts/check.ts"
+  }
+}

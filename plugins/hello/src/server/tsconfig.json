@@ -1,0 +1,4 @@
+{
+  "extends": "@tokamak/sdk/tsconfig.server.json",
+  "include": ["**/*.ts"]
+}

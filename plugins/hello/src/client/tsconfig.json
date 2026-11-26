@@ -1,0 +1,4 @@
+{
+  "extends": "@tokamak/sdk/tsconfig.window.json",
+  "include": ["**/*.ts", "**/*.tsx"]
+}

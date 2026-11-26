@@ -1,0 +1,4 @@
+/* Utilities only: the app already loads Tailwind's base and the Tokamak theme. */
+@import "tailwindcss/utilities.css" layer(utilities);
+@import "@tokamak/ui/theme.css" reference;
+@source "./";

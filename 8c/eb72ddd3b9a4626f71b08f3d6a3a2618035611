@@ -1,0 +1,49 @@
+plugins/ai-profiles/src/client/_generated/components.d.ts
+  s_1d7ba1ecc7a4e2::t_e5213b2230e534 207-243
+plugins/ai/DESIGN.md
+  s_1d7ba1ecc7a4e2::t_e183292dc2cd79 167-171
+plugins/ai/README.md
+  s_1d7ba1ecc7a4e2::t_bafd23b7dc9b61 30-32
+plugins/ai/src/client/_generated/components.d.ts
+  s_1d7ba1ecc7a4e2::t_e328ce83e88188 149-186
+plugins/chat/DESIGN.md
+  s_1d7ba1ecc7a4e2::t_f213e17e3f4fb5 31,41-45,87-88
+plugins/chat/README.md
+  s_1d7ba1ecc7a4e2::t_4648dc9faa285d 64-66
+plugins/chat/src/client/_generated/components.d.ts
+  s_1d7ba1ecc7a4e2::t_cf2c81eeed00f9 110-127
+plugins/code/DESIGN.md
+  s_1d7ba1ecc7a4e2::t_2265e5f3db7aec 38,41
+plugins/code/README.md
+  s_1d7ba1ecc7a4e2::t_adb32a87618d3d 32,42-44
+plugins/code/src/client/_generated/components.d.ts
+  s_1d7ba1ecc7a4e2::t_0b5cb3f9a1ed8f 50-64
+plugins/code/src/client/api.tsx
+  s_1d7ba1ecc7a4e2::t_6d567733530d06 3,119,133
+plugins/hello/src/client/_generated/components.d.ts
+  s_cb2e6045e6b3bc::t_6b6e3a557174d4 7-8
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "8ceb72ddd3b9a4626f71b08f3d6a3a2618035611",
+  "prompts": {},
+  "sessions": {
+    "s_1d7ba1ecc7a4e2": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "d83e282b-c690-4f49-8fac-212a44028aae",
+        "model": "claude-fable-5-2"
+      },
+      "human_author": "JustKira <shighgamerhg@gmail.com>"
+    },
+    "s_cb2e6045e6b3bc": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "6ac81cd7-5d7d-4ae0-9966-f53bdd3c63a6",
+        "model": "claude-opus-5-5"
+      },
+      "human_author": "JustKira <shighgamerhg@gmail.com>"
+    }
+  }
+}

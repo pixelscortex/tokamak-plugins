@@ -1,0 +1,9 @@
+{
+  "extends": "../src/client/tsconfig.json",
+  "compilerOptions": {
+    "allowJs": true,
+    "allowImportingTsExtensions": true
+  },
+  "include": ["**/*.ts", "**/*.tsx"],
+  "exclude": ["fixtures"]
+}

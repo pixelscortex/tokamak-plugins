@@ -1,0 +1,17 @@
+/* Utilities only: the shell already loads Tailwind's base and the Tokamak theme. */
+@import "tailwindcss/utilities.css" layer(utilities);
+@import "@tokamak/ui/theme.css" reference;
+@source "./";
+
+/* The Profiles screen's column: four 296 px subscription cards with 12 px between them
+   (Paper "1 · Profiles · screen"). Inline: a plugin's stylesheet has no theme layer to
+   define the variable in, so the utility carries the value itself. */
+@theme inline {
+  --container-profiles: 1220px;
+  /* The subscription details (Paper "3 · Subscription · details"): a 912 px column,
+     its accounts 536 px of it. */
+  --container-subscription: 912px;
+  --container-accounts: 536px;
+  /* The 2 px between the card's four 24 px icon buttons, as drawn (TKM-265). */
+  --spacing-hair: 2px;
+}

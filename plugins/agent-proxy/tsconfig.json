@@ -1,0 +1,5 @@
+{
+  "extends": "@tokamak/sdk/tsconfig.server.json",
+  "compilerOptions": { "types": ["node"], "skipLibCheck": true },
+  "include": ["plugin.ts", "src/**/*.ts", "tests/**/*.ts"]
+}

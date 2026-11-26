@@ -1,6 +1,6 @@
 /**
  * Type-checks every plugin: its server part, its window part and its
- * descriptor, using the same configs the editor reads. `bun run check`.
+ * descriptor, using the same configs the editor reads, including tests. `bun run check`.
  */
 import { spawnSync } from "node:child_process";
 import { existsSync, readdirSync } from "node:fs";
@@ -14,7 +14,7 @@ if (!existsSync(tsc)) {
 }
 let failed = false;
 for (const id of readdirSync(join(repo, "plugins")).sort()) {
-  for (const project of ["tsconfig.json", "src/server/tsconfig.json", "src/client/tsconfig.json"]) {
+  for (const project of ["tsconfig.json", "src/server/tsconfig.json", "src/client/tsconfig.json", "tests/tsconfig.json"]) {
     const path = join(repo, "plugins", id, project);
     if (!existsSync(path)) continue;
     const result = spawnSync(process.execPath, [tsc, "--noEmit", "-p", path], { stdio: "inherit" });

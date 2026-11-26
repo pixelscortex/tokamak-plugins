@@ -26,5 +26,10 @@ app's plugins folder. See `README.md` for setup and install.
 - **Installing.** `./install.sh [--dev] [id...]`. Test against a throwaway
   folder (`TOKAMAK_PLUGIN_DIR`, `TOKAMAK_SERVER_DIR`) unless told to install
   into the owner's app.
-- **Checks.** `proto run bun -- run check` type-checks every plugin. There is
-  no CI here for now; put what you ran and its result in the PR.
+- **Sync.** Run `TOKAMAK_DIR=/path/to/tokamak ./scripts/sync-from-tokamak.sh [id...]`
+  to copy `chat`, `ai`, `code`, `claude`, `codex`, `basic-auth`,
+  `agent-proxy` and `ai-profiles`. With no IDs it syncs all eight.
+- **Checks.** Run `./install.sh` into a throwaway folder first to generate
+  the types for imports between plugins. Then run `bun run check` and
+  `bun run test` with the pinned Bun. Server-backed tests move in TKM-318.
+  There is no CI here for now; put what you ran and its result in the PR.

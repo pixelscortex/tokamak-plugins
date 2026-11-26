@@ -1,0 +1,9 @@
+{
+  "extends": "@tokamak/sdk/tsconfig.server.json",
+  "compilerOptions": {
+    "types": ["node"],
+    "skipLibCheck": true,
+    "paths": { "plugin:*/contracts": ["../../.tokamak/types/*/contracts.d.ts"] }
+  },
+  "include": ["**/*.ts"]
+}

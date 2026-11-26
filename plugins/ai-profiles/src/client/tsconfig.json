@@ -1,0 +1,12 @@
+{
+  "extends": "@tokamak/sdk/tsconfig.window.json",
+  "compilerOptions": {
+    "paths": {
+      "plugin:*/contracts": ["../../.tokamak/types/*/contracts.d.ts"],
+      "plugin:*/server": ["../../.tokamak/types/*/server.d.ts"],
+      "plugin:*/tables": ["../../.tokamak/types/*/tables.d.ts"],
+      "plugin:*/client": ["../../.tokamak/types/*/client.d.ts"]
+    }
+  },
+  "include": ["**/*.ts", "**/*.tsx"]
+}

@@ -1,0 +1,50 @@
+// Generated plugin screen search types. Commit this file.
+export * from "../api";
+type Local1 = Exclude<import("@tokamak/sdk").ResultOf<typeof import("../../server/_generated/api").api.changes.diff>, import("@tokamak/sdk").MachineFailure | null>;
+type Local2 = Local1["files"][number];
+type Local3 = | { readonly kind: "hunk"; readonly text: string }
+  | {
+      readonly kind: "context" | "added" | "removed" | "note";
+      readonly old?: number;
+      readonly new?: number;
+      readonly text: string;
+    };
+type Props1 = Extract<NonNullable<import("plugin:chat/client").MessageProps>, object>;
+type Props2 = Extract<NonNullable<Props1 & { readonly $row: { readonly item: () => string; readonly index: () => number } }>, object>;
+type Props3 = Extract<NonNullable<{ change: import("../lib/changes").ReplyChange }>, object>;
+type Props4 = Extract<NonNullable<{ added: number; removed: number }>, object>;
+type Props5 = Extract<NonNullable<{ threadId: import("@tokamak/sdk").Id<"threads">; turnId: string | undefined }>, object>;
+type Props6 = Extract<NonNullable<{ children: import("@solidjs/web").JSX.Element }>, object>;
+type Props7 = Extract<NonNullable<{ number: number; diff: Local1 }>, object>;
+type Props8 = Extract<NonNullable<Props7 & { readonly $row: { readonly item: () => import("../../local/changes").FileDiff; readonly index: () => number } }>, object>;
+type Props9 = Extract<NonNullable<{ file: Local2 }>, object>;
+type Props10 = Extract<NonNullable<Props9 & { readonly $row: { readonly item: { readonly kind: "hunk"; readonly text: string; } | { readonly kind: "added" | "removed" | "context" | "note"; readonly old?: number | undefined; readonly new?: number | undefined; readonly text: string; }; readonly index: () => number } }>, object>;
+type Props11 = Extract<NonNullable<{ row: Local3 }>, object>;
+type Props12 = Extract<NonNullable<import("plugin:chat/client").HeaderProps>, object>;
+export declare const find: import("@tokamak/sdk/client").ScreenFind<{
+  "p": [["SnapshotNotice", Props1], ["SnapshotNotice" | "div", Props1], ["Note", Props6], ["TurnReview" | "ScrollArea", Props7, {"role":"note"}], ["PatchNote", Props6]];
+  "div": [["SnapshotNotice", Props1], ["ChangeCard", Props1], ["ChangeCard", Props1], ["TurnReview" | "ScrollArea", Props7], ["FilePatch" | "article", Props9], ["PatchRow", Props11], ["PatchRow", Props11], ["PatchRow", Props11], ["ReviewToggle", Props12, {"role":"group","aria":{"label":"Layout"}}]];
+  "ul": [["SnapshotNotice" | "div", Props1, {"aria":{"label":"Skipped files"}}], ["TurnReview" | "ScrollArea", Props7, {"aria":{"label":"Changed files"}}]];
+  "li": [["SnapshotNotice" | "div" | "ul", Props2], ["TurnReview" | "ScrollArea" | "ul", Props8]];
+  "Icon": [["ChangeCard" | "div", Props1], ["ChangeCard" | "div" | "Row", Props1], ["ChangeCard" | "div" | "Row", Props1], ["TurnReview" | "ScrollArea" | "ul" | "li" | "Row", Props8]];
+  "CardText": [["ChangeCard" | "div", Props1], ["ChangeCard" | "div" | "Row" | "span", Props1]];
+  "Row": [["ChangeCard" | "div", Props1], ["TurnReview" | "ScrollArea" | "ul" | "li", Props8]];
+  "span": [["ChangeCard" | "div" | "Row", Props1], ["ChangeCard" | "div" | "Row", Props1], ["CardText", Props3], ["CardText", Props3], ["Counts", Props4], ["Counts", Props4], ["TurnReview" | "h2", Props7], ["TurnReview" | "h2", Props7], ["FileCounts", Props4], ["FileCounts", Props4], ["FilePatch" | "article" | "header", Props9], ["PatchRow" | "div", Props11], ["PatchRow" | "div", Props11], ["PatchRow" | "div", Props11], ["PatchRow" | "div", Props11], ["PatchRow" | "div", Props11]];
+  "Counts": [["CardText", Props3], ["TurnReview" | "h2", Props7], ["FilePatch" | "article" | "header", Props9]];
+  "Note": [["ReviewPanel" | "view", Props5], ["ReviewPanel" | "view", Props5], ["ReviewPanel" | "view", Props5], ["ReviewPanel" | "view", Props5]];
+  "TurnReview": Props5;
+  "section": [["ReviewPanel", Props5, {"aria":{"label":"Review"}}]];
+  "h2": Props7;
+  "ScrollArea": Props7;
+  "FileCounts": Props8;
+  "FileName": [["TurnReview" | "ScrollArea" | "ul" | "li" | "Row", Props8], ["FilePatch" | "article" | "header" | "span", Props9]];
+  "FilePatch": Props8;
+  "article": Props9;
+  "header": Props9;
+  "PatchNote": [["FilePatch" | "article", Props9], ["FilePatch" | "article", Props9], ["FilePatch" | "article", Props9]];
+  "PatchRow": Props10;
+  "Chip": Props12;
+  "Button": [["ReviewToggle" | "div", Props12], ["ReviewToggle" | "div", Props12]];
+  "Region.Panel": Props12;
+  "ReviewPanel": Props12;
+}>;

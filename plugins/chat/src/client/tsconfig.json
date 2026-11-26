@@ -1,0 +1,7 @@
+{
+  "extends": "@tokamak/sdk/tsconfig.window.json",
+  "compilerOptions": {
+    "types": ["node"]
+  },
+  "include": ["**/*.ts", "**/*.tsx"]
+}

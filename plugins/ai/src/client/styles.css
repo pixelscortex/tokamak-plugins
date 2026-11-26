@@ -1,0 +1,12 @@
+/* Utilities only: the shell already loads Tailwind's base and the Tokamak theme. */
+@import "tailwindcss/utilities.css" layer(utilities);
+@import "@tokamak/ui/theme.css" reference;
+@source "./";
+
+/* The agent picker's two fixed widths (Paper artboard "6 · Thread · picker open"): the agent and
+   model column is at least this wide and the effort column is exactly this wide, so the
+   popover is as wide as its columns and grows when another column joins them. */
+@theme inline {
+  --container-models: 344px;
+  --container-effort: 152px;
+}

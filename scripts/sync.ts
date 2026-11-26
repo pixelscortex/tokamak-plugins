@@ -17,12 +17,11 @@ const designPlugins = new Map(
   [...designNotes].flatMap(([id, note]) => note ? [[note, id] as const] : []),
 );
 
-// Skip Moon tasks and tests that require Tokamak's test server, real CLIs, or another plugin's private files.
+// Skip Moon tasks and the server-backed tests that need a Tokamak checkout, its debug binaries or real CLIs (they move in TKM-318).
 const EXCLUDE = [
   /(?:^|\/)moon\.yml$/,
   /^agent-proxy\/tests\/(?:workspace\.ts|(?:addresses|chatgpt-sign-in|manage-companies|manage|sign-in|proxy|cli)\.test\.ts|cli-sandbox\.ts)$/,
-  /^ai\/tests\/agent-row\.test\.tsx$/,
-  /^ai-profiles\/tests\/(?:profiles-server\.test\.ts|thread-profile\.test\.tsx)$/,
+  /^ai-profiles\/tests\/profiles-server\.test\.ts$/,
   /^claude\/tests\/[^/]+\.mjs$/,
   /^codex\/tests\/e2e\.mjs$/,
 ];

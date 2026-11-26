@@ -44,6 +44,23 @@ link() {
   echo "  $name -> $target"
 }
 
+# Resolve packages with no stable workspace path in Bun's install store.
+# A peer-qualified instance can have a suffix after the version.
+store_package() {
+  local name="$1" version="$2" dir
+  local key="${name/\//+}@$version"
+  local paths=()
+  for dir in "$tokamak/node_modules/.bun/$key" "$tokamak/node_modules/.bun/$key"+*; do
+    [ -f "$dir/node_modules/$name/package.json" ] && paths+=("$dir/node_modules/$name")
+  done
+  if [ "${#paths[@]}" -ne 1 ]; then
+    fail "expected one copy of $name@$version in $tokamak/node_modules/.bun, found ${#paths[@]}. Run 'proto run bun -- install --frozen-lockfile' in $tokamak."
+  fi
+  echo "${paths[0]#"$tokamak/"}"
+}
+
+marked="$(store_package marked 18.2.0)"
+
 # Name in node_modules, then the folder in the checkout it links to.
 # Tokamak's own packages: the SDK, the builder, the UI kit and the runtime.
 # Then the toolchain a plugin with a window imports or type-checks against,
@@ -60,6 +77,14 @@ links=(
   "vite" "node_modules/vite"
   "@types/node" "node_modules/@types/node"
   "typescript" "packages/sdk/node_modules/typescript"
+  "vitest" "packages/build/node_modules/vitest"
+  "jsdom" "packages/build/node_modules/jsdom"
+  "@testing-library/dom" "packages/ui/node_modules/@testing-library/dom"
+  "@testing-library/user-event" "packages/ui/node_modules/@testing-library/user-event"
+  "@solidjs/vite-plugin" "packages/build/node_modules/@solidjs/vite-plugin"
+  "@ui-sdk/core" "packages/ui/node_modules/@ui-sdk/core"
+  "@ui-sdk/solid" "packages/ui/node_modules/@ui-sdk/solid"
+  "marked" "$marked"
 )
 
 # Check everything first, so a problem never leaves half the links changed.

@@ -2,7 +2,8 @@
 
 The plugins for [Tokamak](https://github.com/pixelscortex/tokamak). The app
 ships with no plugins: it loads whatever builds are in its **plugins folder**.
-This repository builds plugins and puts them there.
+This repository builds and installs `chat`, `ai`, `code`, `claude`, `codex`,
+`basic-auth`, `agent-proxy` and `ai-profiles`, plus the `hello` example.
 
 ## Set up
 
@@ -20,9 +21,8 @@ TOKAMAK_DIR=/path/to/tokamak ./setup.sh
 ```
 
 `setup.sh` links `@tokamak/sdk`, `@tokamak/build`, `@tokamak/ui` and
-`@tokamak/runtime`, plus the toolchain they build with (Solid, Vite, Tailwind,
-TypeScript), into `node_modules`. Run it again after moving the checkout; it
-only replaces its own links.
+`@tokamak/runtime`, plus the plugins' build and test dependencies, into `node_modules`. Run it
+again after moving the checkout; it only replaces its own links.
 
 ## Install
 
@@ -53,9 +53,28 @@ nothing about it; the plugins folder is the only thing they share.
 
 ## Check
 
+After setup, build once to generate the types for imports between plugins.
+Use a temporary install folder for local checks:
+
 ```sh
-proto run bun -- run check   # type-check every plugin, as the editor does
+d=$(mktemp -d)
+TOKAMAK_SERVER_DIR="$d/data" TOKAMAK_PLUGIN_DIR="$d/plugins" ./install.sh
+proto run bun -- run check
+proto run bun -- run test
 ```
+
+`bun run test` runs the plugin unit tests. Server-backed tests move in TKM-318.
+
+## Sync from Tokamak
+
+```sh
+TOKAMAK_DIR=/path/to/tokamak ./scripts/sync-from-tokamak.sh          # all eight
+TOKAMAK_DIR=/path/to/tokamak ./scripts/sync-from-tokamak.sh chat ai  # named plugins
+```
+
+The script mirrors the tracked source and design notes, including deletions.
+It preserves local manifests and configurations, and prints the source commit.
+Review and commit the diff after each sync.
 
 ## Layout
 

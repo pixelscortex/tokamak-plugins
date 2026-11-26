@@ -1,4 +1,4 @@
-import { windowTestConfig } from "@tokamak/build/window-test-config";
+import { windowTestConfig } from "../../../scripts/window-test-config.ts";
 import { defineConfig } from "vitest/config";
 import { execFileSync } from "node:child_process";
 import { cpSync, existsSync, mkdirSync, symlinkSync, writeFileSync } from "node:fs";
@@ -21,8 +21,6 @@ function buildProbe() {
   mkdirSync(root, { recursive: true });
   cpSync(join(chat, "tests/fixtures/chat-probe"), probe, { recursive: true, force: true });
   if (!existsSync(join(root, "chat"))) symlinkSync(chat, join(root, "chat"), "dir");
-  if (!existsSync(join(probe, "node_modules")))
-    symlinkSync(join(chat, "node_modules"), join(probe, "node_modules"), "dir");
   writeFileSync(
     join(probe, "tsconfig.json"),
     JSON.stringify({ extends: "@tokamak/sdk/tsconfig.window.json", include: ["src"] }),

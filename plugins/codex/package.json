@@ -2,11 +2,5 @@
   "name": "codex",
   "version": "0.1.0",
   "private": true,
-  "type": "module",
-  "dependencies": {
-    "@tokamak/sdk": "workspace:*"
-  },
-  "devDependencies": {
-    "@tokamak/build": "workspace:*"
-  }
+  "type": "module"
 }

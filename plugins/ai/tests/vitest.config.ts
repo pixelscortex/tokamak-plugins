@@ -1,6 +1,6 @@
 import { defineConfig } from "vitest/config";
 import { resolve } from "node:path";
-import { windowTestConfig } from "@tokamak/build/window-test-config";
+import { windowTestConfig } from "../../../scripts/window-test-config.ts";
 
 const ai = resolve(import.meta.dirname, "..");
 export default defineConfig(

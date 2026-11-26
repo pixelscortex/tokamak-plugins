@@ -1,5 +1,12 @@
 {
   "extends": "@tokamak/sdk/tsconfig.server.json",
-  "compilerOptions": { "types": [], "skipLibCheck": true },
+  "compilerOptions": {
+    "types": ["node"],
+    "skipLibCheck": true,
+    "paths": {
+      "plugin:*/server": ["../../.tokamak/types/*/server.d.ts"],
+      "plugin:*/tables": ["../../.tokamak/types/*/tables.d.ts"]
+    }
+  },
   "include": ["**/*.ts"]
 }

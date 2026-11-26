@@ -4,12 +4,6 @@
   "private": true,
   "type": "module",
   "scripts": {
-    "test": "vitest run tests --disableConsoleIntercept"
-  },
-  "dependencies": {
-    "@tokamak/sdk": "workspace:*"
-  },
-  "devDependencies": {
-    "vitest": "5.1.0"
+    "test": "bun ../../node_modules/vitest/vitest.mjs run tests --disableConsoleIntercept"
   }
 }

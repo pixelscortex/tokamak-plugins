@@ -1,0 +1,23 @@
+plugins/ai-profiles/tests/thread-profile.test.tsx
+  s_42fd82caea7e32::t_94431be0005cd6 1-119
+plugins/ai/tests/agent-row.test.tsx
+  s_42fd82caea7e32::t_7d8d536ea2a6da 1-375
+scripts/sync.ts
+  s_42fd82caea7e32::t_8b2dc6f14ad513 20,24
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "2bb38f14b797cde82b4ff148cc6062fb06e30de7",
+  "prompts": {},
+  "sessions": {
+    "s_42fd82caea7e32": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "5f2c507a-159d-4eeb-90d9-ab6f338a3ad4",
+        "model": "claude-opus-5-5"
+      },
+      "human_author": "JustKira <shighgamerhg@gmail.com>"
+    }
+  }
+}

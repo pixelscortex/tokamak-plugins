@@ -1,0 +1,6 @@
+# Links to the Tokamak checkout, made by ./setup.sh.
+node_modules/
+# Build output; install.sh copies it into the app's plugins folder.
+dist/
+.DS_Store
+*.log

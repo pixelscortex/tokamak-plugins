@@ -1,0 +1,21 @@
+scripts/sync-from-tokamak.sh
+  s_1ab33bdbe49b79::t_0d0e4c6823514a 1-9
+scripts/sync.ts
+  s_1ab33bdbe49b79::t_3a6ebff0f13a45 1-134
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "b7b8eb3ff9068a889a02465c334334d89517a86c",
+  "prompts": {},
+  "sessions": {
+    "s_1ab33bdbe49b79": {
+      "agent_id": {
+        "tool": "codex",
+        "id": "01a219f4-edcf-79e2-b46a-21d168a97b66",
+        "model": "gpt-6.2-sol"
+      },
+      "human_author": "JustKira <shighgamerhg@gmail.com>"
+    }
+  }
+}

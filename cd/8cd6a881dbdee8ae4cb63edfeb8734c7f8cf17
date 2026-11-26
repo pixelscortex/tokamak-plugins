@@ -1,0 +1,65 @@
+.gitignore
+  s_1ab33bdbe49b79::t_3f236b089894cc 7-9
+plugins/claude/package.json
+  s_1ab33bdbe49b79::t_3f236b089894cc 5
+plugins/codex/package.json
+  s_1ab33bdbe49b79::t_3f236b089894cc 5
+plugins/ai-profiles/package.json
+  s_1ab33bdbe49b79::t_3f236b089894cc 7
+setup.sh
+  s_1ab33bdbe49b79::t_3f236b089894cc 47-63,80-87
+package.json
+  s_1ab33bdbe49b79::t_3f236b089894cc 10-11
+scripts/check.ts
+  s_1ab33bdbe49b79::t_3f236b089894cc 3,17
+plugins/basic-auth/DESIGN.md
+  s_1ab33bdbe49b79::t_3f236b089894cc 1-5
+scripts/test.ts
+  s_1ab33bdbe49b79::t_3f236b089894cc 1-26
+plugins/basic-auth/package.json
+  s_1ab33bdbe49b79::t_3f236b089894cc 5
+plugins/chat/package.json
+  s_1ab33bdbe49b79::t_3f236b089894cc 7
+plugins/ai/package.json
+  s_1ab33bdbe49b79::t_3f236b089894cc 7
+plugins/code/package.json
+  s_1ab33bdbe49b79::t_3f236b089894cc 7
+plugins/agent-proxy/package.json
+  s_1ab33bdbe49b79::t_3f236b089894cc 7
+AGENTS.md
+  s_1ab33bdbe49b79::t_98f4d25cc87430 29-35
+README.md
+  s_1ab33bdbe49b79::t_de0f6c35c86ef6 5-6,24-25,56-58,60-63,66-78
+plugins/ai-profiles/src/server/tsconfig.json
+  s_1ab33bdbe49b79::t_8a74667e414e78 3-10
+plugins/ai-profiles/tests/vitest.config.ts
+  s_1ab33bdbe49b79::t_ebbc33160e5dfe 3,6-11
+plugins/ai/src/server/tsconfig.json
+  s_1ab33bdbe49b79::t_d4ea936edc14a6 3-10
+plugins/ai/tests/vitest.config.ts
+  s_1ab33bdbe49b79::t_2726cb22ccb5b8 3
+plugins/chat/tests/vitest.config.ts
+  s_1ab33bdbe49b79::t_160d24c928c880 1
+plugins/code/src/server/tsconfig.json
+  s_1ab33bdbe49b79::t_cc418121e4c456 3-10
+plugins/code/tests/vitest.config.ts
+  s_1ab33bdbe49b79::t_e23b2b776a5f46 4
+scripts/window-test-config.ts
+  s_1ab33bdbe49b79::t_91bf6935e45612 1-16
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "cd8cd6a881dbdee8ae4cb63edfeb8734c7f8cf17",
+  "prompts": {},
+  "sessions": {
+    "s_1ab33bdbe49b79": {
+      "agent_id": {
+        "tool": "codex",
+        "id": "01a219f4-edcf-79e2-b46a-21d168a97b66",
+        "model": "gpt-6.2-sol"
+      },
+      "human_author": "JustKira <shighgamerhg@gmail.com>"
+    }
+  }
+}

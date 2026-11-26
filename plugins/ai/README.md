@@ -27,7 +27,9 @@ publishes and imports no agent plugin: agents (`claude`, `codex`, the test
   "🔒 Claude wants to run `git push origin feat/csv-export`" with Approve,
   Always allow this session, Decline and Cancel on keys 1 to 4 (registered
   with `useShortcuts`; they answer only the card of the composer that has
-  focus, and a digit typed into a field that holds text stays text). Only the
+  focus, and a digit typed into a field that holds text stays text). The card
+  is placed inside Chat's `top` element; its shortcut checks focus within
+  that element's composer tray. Only the
   sender sees it, on the device that runs the turn. A question from before the
   app quit shows "This question expired when the app quit." at once.
 - The empty thread's heading names the agent: "What should Claude work on?".

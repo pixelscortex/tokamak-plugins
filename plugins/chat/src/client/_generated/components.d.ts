@@ -107,4 +107,22 @@ export declare const find: import("@tokamak/sdk/client").ScreenFind<{
   "RowList.Root": [["ThreadList" | "nav", Props18, {"aria":{"label":"Threads"}}]];
   "RowList.Group": Props18;
   "ThreadRow": Props19;
+}, {
+  "Chat": [[never, {}]];
+  "NewThread": [[never, Props1]];
+  "OpenThread": [[never, Props2]];
+  "ErrorLine": [[never, Props4]];
+  "Composer": [[never, Props5]];
+  "SendButton": [[never, Props6]];
+  "Empty": [[never, Props7]];
+  "FolderPicker": [[never, Props8]];
+  "Choice": [[never, Props10]];
+  "Message": [[never, Props11]];
+  "Header": [[never, Props12]];
+  "FolderChip": [[never, Props13]];
+  "ThreadMenu": [[never, Props14]];
+  "DeleteDialog": [[never, Props15]];
+  "TitleInput": [[never, Props16]];
+  "ThreadRow": [[never, Props17]];
+  "ThreadList": [[never, Props18]];
 }>;

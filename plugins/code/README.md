@@ -29,6 +29,7 @@ gets no snapshots, even if the agent runs `git init` during that turn.
   repository. When Chat opens on the desktop again, Code also checks the
   repositories recorded for that signed-in device and removes snapshot refs
   for threads deleted elsewhere. A plain browser cannot change local refs.
+  The cleanup attaches to Chat's `Composer` and prunes once per connection.
 
 In a window connected to a Runner:
 
@@ -38,7 +39,9 @@ In a window connected to a Runner:
   visible, and when it is shown or focused.
 - A layout control before the thread menu that opens the review panel: "Turn 3 · 4 files +86 −21",
   the files with their counts, then plain diffs. The panel loads at most 3,000 hunk lines and
-  marks the file it cut.
+  marks the file it cut. The panel attaches to Chat's `Header` and renders
+  in the shell's panel region for as long as that thread's header is mounted
+  and review is open.
 - On another computer (a second desktop of the same person, or a teammate's), the thread's
   folder path may not exist or may point at an unrelated repository with no snapshot refs, so
   nothing shows there. How code travels between computers is milestone 2.

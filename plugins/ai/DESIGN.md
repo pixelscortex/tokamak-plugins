@@ -164,6 +164,11 @@ missing or signed out, and listens to `onSent` / `onDraftSubmit`.
 - `AgentMark` (paths only, painted in currentColor): the marks `claude` and
   `codex` ship must stay single-colour paths.
 
+The permission card draws inside `top` and uses its containing composer tray
+to check which prompt has focus for the digit shortcuts. The composer's
+public props have no focus or DOM handle, so an attachment alone cannot
+replace that check.
+
 ## Primitives used
 
 `Avatar` (steers), `Button`, `Collapsible` (Thinking uses its `quiet` trigger), `Icon`, `icons`, `Kbd`, `Menu` (the picker: `Trigger`, `Content`, `RadioGroup`, `RadioItem`), `rowVariants`,

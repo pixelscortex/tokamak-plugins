@@ -1,6 +1,6 @@
 import { For, Show, createEffect, createSignal, onCleanup } from "solid-js";
 import { isFailure, type Id, type MachineFailure, type ResultOf } from "@tokamak/sdk";
-import { after, append, before, prepend, useClient } from "@tokamak/sdk/client";
+import { after, append, attach, before, useClient } from "@tokamak/sdk/client";
 import * as chat from "plugin:chat/client";
 import { api } from "../server/_generated/api";
 import { lastOfTurn, oneAtATime, turnChanged, turnOf } from "./lib/changes";
@@ -116,7 +116,7 @@ function SnapshotCleanup() {
   return null;
 }
 
-export const Cleanup = prepend(chat.find("top"), SnapshotCleanup);
+export const Cleanup = attach(chat.find("Composer"), SnapshotCleanup);
 
 /** The change card under the last reply of a turn, only when the turn changed something. */
 export const Changes = append(chat.find("footer"), ChangeCard, {
@@ -130,4 +130,4 @@ export const Branch = after(chat.find("title", { in: "Header" }), BranchChip);
 export const Review = before(chat.find("ThreadMenu"), ReviewToggle);
 
 /** The review panel itself, in the shell's panel region; mounted with the thread's header. */
-export const Panel = after(chat.find("ThreadMenu"), ReviewPanelMount);
+export const Panel = attach(chat.find("Header"), ReviewPanelMount);

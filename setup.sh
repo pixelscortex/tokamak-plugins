@@ -24,34 +24,53 @@ tokamak="$(cd "$tokamak" && pwd -P)"
 [ -d "$tokamak/node_modules" ] && [ -e "$tokamak/packages/build/node_modules/solid-js" ] ||
   fail "the Tokamak checkout at $tokamak has no installed dependencies. Run 'proto run bun -- install --frozen-lockfile' there first."
 
-# Makes node_modules/<name> a link to <target>. Refuses to replace a real
-# folder (for example one written by `bun install`), so nothing is deleted.
-link() {
-  local name="$1" target="$2" path="$repo/node_modules/$1"
-  [ -e "$target" ] || fail "the Tokamak checkout at $tokamak is missing $target. Run 'proto run bun -- install --frozen-lockfile' there."
-  target="$(cd "$target" && pwd -P)"
-  mkdir -p "$(dirname "$path")"
+# The source must exist, and node_modules/<name> must be absent or a link:
+# a real folder there (for example one written by `bun install`) is never
+# replaced, so nothing is deleted.
+check() {
+  local path="$repo/node_modules/$1"
+  [ -e "$2" ] || fail "the Tokamak checkout at $tokamak is missing $2. Run 'proto run bun -- install --frozen-lockfile' there."
   if [ -e "$path" ] && [ ! -L "$path" ]; then
     fail "$path is a real folder, not a link. Move it aside and run setup again."
   fi
+}
+
+# Makes node_modules/<name> a link to <target>.
+link() {
+  local name="$1" target path="$repo/node_modules/$1"
+  target="$(cd "$2" && pwd -P)"
+  mkdir -p "$(dirname "$path")"
   ln -sfn "$target" "$path"
   echo "  $name -> $target"
 }
 
-echo "Linking from the Tokamak checkout at $tokamak"
+# Name in node_modules, then the folder in the checkout it links to.
 # Tokamak's own packages: the SDK, the builder, the UI kit and the runtime.
-for package in sdk build ui runtime; do
-  link "@tokamak/$package" "$tokamak/packages/$package"
+# Then the toolchain a plugin with a window imports or type-checks against,
+# taken from the checkout's own installs so the versions always match what
+# Tokamak builds with. A plugin that imports anything else needs it added here.
+links=(
+  "@tokamak/sdk" "packages/sdk"
+  "@tokamak/build" "packages/build"
+  "@tokamak/ui" "packages/ui"
+  "@tokamak/runtime" "packages/runtime"
+  "solid-js" "packages/build/node_modules/solid-js"
+  "@solidjs/web" "packages/build/node_modules/@solidjs/web"
+  "tailwindcss" "packages/ui/node_modules/tailwindcss"
+  "vite" "node_modules/vite"
+  "@types/node" "node_modules/@types/node"
+  "typescript" "packages/sdk/node_modules/typescript"
+)
+
+# Check everything first, so a problem never leaves half the links changed.
+for ((i = 0; i < ${#links[@]}; i += 2)); do
+  check "${links[i]}" "$tokamak/${links[i + 1]}"
 done
-# The toolchain a plugin with a window imports or type-checks against, taken
-# from the checkout's own installs so the versions always match what Tokamak
-# builds with. A plugin that imports anything else needs it added here.
-link "solid-js" "$tokamak/packages/build/node_modules/solid-js"
-link "@solidjs/web" "$tokamak/packages/build/node_modules/@solidjs/web"
-link "tailwindcss" "$tokamak/packages/ui/node_modules/tailwindcss"
-link "vite" "$tokamak/node_modules/vite"
-link "@types/node" "$tokamak/node_modules/@types/node"
-link "typescript" "$tokamak/packages/sdk/node_modules/typescript"
+
+echo "Linking from the Tokamak checkout at $tokamak"
+for ((i = 0; i < ${#links[@]}; i += 2)); do
+  link "${links[i]}" "$tokamak/${links[i + 1]}"
+done
 
 echo "Tokamak commit: $(git -C "$tokamak" rev-parse --short HEAD 2>/dev/null || echo unknown)"
 echo "Done. Build and install with ./install.sh [--dev] [id...]"

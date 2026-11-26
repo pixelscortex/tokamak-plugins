@@ -28,7 +28,7 @@ These are the searches used by the starter add-ons:
 
 | Search                                 | File                   | What goes there                                                                                  |
 | -------------------------------------- | ---------------------- | ------------------------------------------------------------------------------------------------ |
-| `chat.find("top")`                     | `ui/composer.tsx`      | Permission card and cleanup inside the top lane.                                                 |
+| `chat.find("top")`                     | `ui/composer.tsx`      | Permission card inside the top lane.                                                             |
 | `chat.find("box")`                     | `ui/composer.tsx`      | Agent row after the prompt box.                                                                  |
 | `chat.find("SendButton")`              | `ui/composer.tsx`      | Stop in place of Send.                                                                           |
 | `chat.find("heading")`                 | `ui/empty.tsx`         | Agent heading when an agent is available; chat supplies the default.                             |
@@ -38,7 +38,11 @@ These are the searches used by the starter add-ons:
 | `chat.find("status")`                  | `ui/thread-list.tsx`   | Status icon in the lane before the title.                                                        |
 | `chat.find("detail")`                  | `ui/thread-list.tsx`   | Agent, model and optional profile code in the second line; helper rows after it.                 |
 | `chat.find("title", { in: "Header" })` | `ui/thread-header.tsx` | Branch chip after the title.                                                                     |
-| `chat.find("ThreadMenu")`              | `ui/thread-header.tsx` | Review toggle before the menu; review panel mount after it.                                      |
+| `chat.find("ThreadMenu")`              | `ui/thread-header.tsx` | Review toggle before the menu.                                                                   |
+
+`code` attaches cleanup to the `Composer` render function and the review
+panel mount to the `Header` render function. Their lifetimes follow those
+instances even if a placement changes an element inside them.
 
 Other hooks (not drawn): `holdSend` turns Send off in a composer, `onSent`
 announces each Send, `onDraftSubmit` handles a draft before Send.
@@ -80,7 +84,8 @@ Chat fills the shell's `Region.Sidebar` (thread list) and `Region.Header`
 - The thread table or `threads:start`: AI Profiles uses a typed thread reference
   and a mutation hook to inherit the last profile on the first Send.
 - The header layout (`gap-2`, chip after the title, `flex-1` before the menu):
-  `code` branch chip (`ms-2`), layout control and review panel mount.
+  `code` branch chip (`ms-2`) and layout control. If the `Header` render
+  function changes, check the review panel mount in the shell's panel region.
 - The empty state heading style (`text-read font-semibold`): `ai`
   changes the text through `Original` and inherits the heading markup and style.
 - Removing or renaming any part: every action on it in `ai` and `code`

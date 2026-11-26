@@ -61,7 +61,9 @@ and streams replies from plugins through its reply API.
 
 Use the typed `find` function from `plugin:chat/client` to target a JSX element by name. See [Chat's design notes](../../design/chat.md#parts-it-offers)
 for the parts used by starter add-ons. Each action and its live `when`
-receive the owning component's props.
+receive the owning component's props. Use `attach(chat.find("Composer"), fn)`
+or `attach(chat.find("Header"), fn)` to bind code to that render function's
+lifetime, even when an element inside it is hidden or layered.
 
 `Message.next` and `isLast` tell where a run of replies ends without chat
 knowing about turns. A filled detail lane makes the thread row a double row.

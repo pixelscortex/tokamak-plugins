@@ -10,7 +10,13 @@ export function windowTestConfig(...args: Parameters<typeof tokamakWindowTestCon
   return {
     ...config,
     server: { fs: { allow: [repo, resolve(sdk, "../..")] } },
-    // Use the same browser build of Solid in UI SDK and the window tests.
-    test: { ...config.test, server: { deps: { inline: [/@ui-sdk\//] } } },
+    test: {
+      ...config.test,
+      // The linked builder derives screen trees from multiple source files.
+      // Vitest can reuse a transform after those files or the builder change.
+      fsModuleCache: false,
+      // Use the same browser build of Solid in UI SDK and the window tests.
+      server: { deps: { inline: [/@ui-sdk\//] } },
+    },
   };
 }

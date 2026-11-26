@@ -1,0 +1,19 @@
+scripts/sync.ts
+  s_1ab33bdbe49b79::t_33c8d9cd885fd6 20,24-25
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "4eff6f3d08dc5f2588cad72778cb7701df0785ba",
+  "prompts": {},
+  "sessions": {
+    "s_1ab33bdbe49b79": {
+      "agent_id": {
+        "tool": "codex",
+        "id": "01a219f4-edcf-79e2-b46a-21d168a97b66",
+        "model": "gpt-6.2-sol"
+      },
+      "human_author": "JustKira <shighgamerhg@gmail.com>"
+    }
+  }
+}

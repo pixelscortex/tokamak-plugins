@@ -1,0 +1,41 @@
+# Codex 0.170.0 app-server recording in Ask first; local data removed and unrelated events omitted.
+# Write steps reproduce the disk effects verified during the live run.
+{"read":"init","expect":{"method":"initialize"}}
+{"out":{"id":{"$":"init.id"},"result":{"userAgent":"tokamak/0.170.0 (example-platform)","codexHome":"/example/.codex","platformFamily":"unix","platformOs":"macos"}}}
+{"read":"ready","expect":{"method":"initialized"}}
+{"read":"thread","expect":{"method":"thread/start","params":{"sandbox":"workspace-write","approvalPolicy":"untrusted","approvalsReviewer":"user"}}}
+{"out":{"id":{"$":"thread.id"},"result":{"model":"gpt-6.2-sol","reasoningEffort":"low","thread":{"id":"codex-session","parentThreadId":null,"agentRole":null,"preview":""}}}}
+{"out":{"method":"thread/started","params":{"thread":{"id":"codex-session","parentThreadId":null,"agentRole":null,"preview":""}}}}
+{"read":"turn","expect":{"method":"turn/start","params":{"threadId":"codex-session","input":[{"type":"text","text":"Use the built-in subagent tool to launch exactly one helper named helper. Ask it to run the shell command `printf %s helper-approval > helper.txt` in this same folder, then report completion. Wait for the helper to finish and report its result. Do not run a shell command or edit files yourself.","text_elements":[]}],"effort":"medium"}}}
+{"out":{"id":{"$":"turn.id"},"result":{"turn":{"id":"codex-wire-1","status":"inProgress"}}}}
+{"out":{"method":"turn/started","params":{"threadId":"codex-session","turn":{"id":"codex-wire-1","status":"inProgress"}}}}
+{"out":{"method":"item/started","params":{"threadId":"codex-session","turnId":"codex-wire-1","item":{"type":"agentMessage","id":"codex-item-1","text":"","phase":"commentary"}}}}
+{"out":{"method":"item/completed","params":{"threadId":"codex-session","turnId":"codex-wire-1","item":{"type":"agentMessage","id":"codex-item-1","text":"I’ll launch one helper named `helper` and wait for its result.","phase":"commentary"}}}}
+{"out":{"method":"item/started","params":{"threadId":"codex-session","turnId":"codex-wire-1","item":{"type":"subAgentActivity","id":"codex-item-2","kind":"started","agentThreadId":"helper-thread","agentPath":"/root/helper"}}}}
+{"read":"helper","expect":{"method":"thread/read","params":{"threadId":"helper-thread","includeTurns":false}}}
+{"out":{"method":"item/completed","params":{"threadId":"codex-session","turnId":"codex-wire-1","item":{"type":"subAgentActivity","id":"codex-item-2","kind":"started","agentThreadId":"helper-thread","agentPath":"/root/helper"}}}}
+{"out":{"id":{"$":"helper.id"},"result":{"thread":{"id":"helper-thread","parentThreadId":"codex-session","agentRole":null,"preview":""}}}}
+{"out":{"method":"turn/started","params":{"threadId":"helper-thread","turn":{"id":"codex-wire-2","status":"inProgress"}}}}
+{"out":{"method":"thread/tokenUsage/updated","params":{"threadId":"codex-session","turnId":"codex-wire-1","tokenUsage":{"total":{"inputTokens":16503,"outputTokens":117,"cachedInputTokens":0}}}}}
+{"out":{"method":"item/started","params":{"threadId":"codex-session","turnId":"codex-wire-1","item":{"type":"collabAgentToolCall","id":"codex-item-3","tool":"wait","status":"inProgress","receiverThreadIds":[],"prompt":null,"agentsStates":{}}}}}
+{"out":{"method":"item/started","params":{"threadId":"helper-thread","turnId":"codex-wire-2","item":{"type":"agentMessage","id":"codex-item-4","text":"","phase":"commentary"}}}}
+{"out":{"method":"item/completed","params":{"threadId":"helper-thread","turnId":"codex-wire-2","item":{"type":"agentMessage","id":"codex-item-4","text":"I’ll run the requested command in the shared folder.","phase":"commentary"}}}}
+{"out":{"method":"item/started","params":{"threadId":"helper-thread","turnId":"codex-wire-2","item":{"type":"commandExecution","id":"codex-item-5","command":"/bin/zsh -lc 'printf %s helper-approval > helper.txt'","cwd":"/example/project","source":"agent","status":"inProgress","exitCode":null}}}}
+{"out":{"method":"item/commandExecution/requestApproval","params":{"threadId":"helper-thread","turnId":"codex-wire-2","kind":"command","itemId":"codex-item-5","command":"/bin/zsh -lc 'printf %s helper-approval > helper.txt'","cwd":"/example/project","availableDecisions":["accept",{"acceptWithExecpolicyAmendment":{"execpolicy_amendment":["/bin/zsh","-lc","printf %s helper-approval > helper.txt"]}},"cancel"]},"id":0}}
+{"read":"answer1","expect":{"id":0,"result":{"decision":"accept"}}}
+{"out":{"method":"serverRequest/resolved","params":{"threadId":"helper-thread","requestId":0}}}
+{"write":"helper.txt","text":"helper-approval"}
+{"out":{"method":"item/completed","params":{"threadId":"helper-thread","turnId":"codex-wire-2","item":{"type":"commandExecution","id":"codex-item-5","command":"/bin/zsh -lc 'printf %s helper-approval > helper.txt'","cwd":"/example/project","source":"unifiedExecStartup","status":"completed","exitCode":0}}}}
+{"out":{"method":"thread/tokenUsage/updated","params":{"threadId":"helper-thread","turnId":"codex-wire-2","tokenUsage":{"total":{"inputTokens":20348,"outputTokens":94,"cachedInputTokens":0}}}}}
+{"out":{"method":"item/started","params":{"threadId":"helper-thread","turnId":"codex-wire-2","item":{"type":"agentMessage","id":"codex-item-6","text":"","phase":"final_answer"}}}}
+{"out":{"method":"item/completed","params":{"threadId":"helper-thread","turnId":"codex-wire-2","item":{"type":"agentMessage","id":"codex-item-6","text":"The command exited successfully and wrote `helper-approval` to `helper.txt`.","phase":"final_answer"}}}}
+{"out":{"method":"thread/tokenUsage/updated","params":{"threadId":"helper-thread","turnId":"codex-wire-2","tokenUsage":{"total":{"inputTokens":40846,"outputTokens":114,"cachedInputTokens":20096}}}}}
+{"out":{"method":"item/started","params":{"threadId":"codex-session","turnId":"codex-wire-1","item":{"type":"subAgentActivity","id":"codex-item-7","kind":"completed","agentThreadId":"helper-thread","agentPath":"/root/helper"}}}}
+{"out":{"method":"turn/completed","params":{"threadId":"helper-thread","turn":{"id":"codex-wire-2","status":"completed"}}}}
+{"out":{"method":"item/completed","params":{"threadId":"codex-session","turnId":"codex-wire-1","item":{"type":"subAgentActivity","id":"codex-item-7","kind":"completed","agentThreadId":"helper-thread","agentPath":"/root/helper"}}}}
+{"out":{"method":"item/completed","params":{"threadId":"codex-session","turnId":"codex-wire-1","item":{"type":"collabAgentToolCall","id":"codex-item-3","tool":"wait","status":"completed","receiverThreadIds":[],"prompt":null,"agentsStates":{}}}}}
+{"out":{"method":"thread/tokenUsage/updated","params":{"threadId":"codex-session","turnId":"codex-wire-1","tokenUsage":{"total":{"inputTokens":33211,"outputTokens":138,"cachedInputTokens":16256}}}}}
+{"out":{"method":"item/started","params":{"threadId":"codex-session","turnId":"codex-wire-1","item":{"type":"agentMessage","id":"codex-item-8","text":"","phase":"final_answer"}}}}
+{"out":{"method":"item/completed","params":{"threadId":"codex-session","turnId":"codex-wire-1","item":{"type":"agentMessage","id":"codex-item-8","text":"`helper` finished and reported that the command successfully wrote `helper-approval` to `helper.txt`. I did not run any shell commands or edit any files myself.","phase":"final_answer"}}}}
+{"out":{"method":"thread/tokenUsage/updated","params":{"threadId":"codex-session","turnId":"codex-wire-1","tokenUsage":{"total":{"inputTokens":50014,"outputTokens":176,"cachedInputTokens":32768}}}}}
+{"out":{"method":"turn/completed","params":{"threadId":"codex-session","turn":{"id":"codex-wire-1","status":"completed"}}}}

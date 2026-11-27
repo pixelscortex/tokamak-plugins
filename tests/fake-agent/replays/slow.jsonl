@@ -1,0 +1,8 @@
+# A slow agent: one line, then nothing for as long as the test likes (up to two
+# minutes) until a file named `go` appears in the thread's folder. Its turn must
+# stay running however long the agent is quiet, as long as the app is open.
+{"read": "prompt"}
+{"out": {"type": "text", "delta": "Thinking it over."}}
+{"gate": "go", "ms": 120000}
+{"out": {"type": "text", "delta": " Done."}}
+{"out": {"type": "done", "sessionId": "replay-slow-session"}}

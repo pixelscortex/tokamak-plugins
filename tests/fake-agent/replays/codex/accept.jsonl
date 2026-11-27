@@ -1,0 +1,31 @@
+# Codex 0.170.0 app-server recording in Ask first; local data removed and unrelated events omitted.
+# Write steps reproduce the disk effects verified during the live run.
+{"read":"init","expect":{"method":"initialize"}}
+{"out":{"id":{"$":"init.id"},"result":{"userAgent":"tokamak/0.170.0 (example-platform)","codexHome":"/example/.codex","platformFamily":"unix","platformOs":"macos"}}}
+{"read":"ready","expect":{"method":"initialized"}}
+{"read":"thread","expect":{"method":"thread/start","params":{"sandbox":"workspace-write","approvalPolicy":"untrusted","approvalsReviewer":"user"}}}
+{"out":{"id":{"$":"thread.id"},"result":{"model":"gpt-6.2-sol","reasoningEffort":"low","thread":{"id":"codex-session","parentThreadId":null,"agentRole":null,"preview":""}}}}
+{"out":{"method":"thread/started","params":{"thread":{"id":"codex-session","parentThreadId":null,"agentRole":null,"preview":""}}}}
+{"read":"turn","expect":{"method":"turn/start","params":{"threadId":"codex-session","input":[{"type":"text","text":"First use the native apply_patch tool to replace the only line in existing.txt (unchanged) with patched. Do not use the shell for the edit. Then: Use the shell tool once to run `printf %s tokamak-permission > command.txt` in the current folder. Do not use an escalated sandbox or any substitute tool. If declined, do not retry. Then report the outcome.","text_elements":[]}],"effort":"medium"}}}
+{"out":{"id":{"$":"turn.id"},"result":{"turn":{"id":"codex-wire-1","status":"inProgress"}}}}
+{"out":{"method":"turn/started","params":{"threadId":"codex-session","turn":{"id":"codex-wire-1","status":"inProgress"}}}}
+{"out":{"method":"item/started","params":{"threadId":"codex-session","turnId":"codex-wire-1","item":{"type":"agentMessage","id":"codex-item-1","text":"","phase":"commentary"}}}}
+{"out":{"method":"item/completed","params":{"threadId":"codex-session","turnId":"codex-wire-1","item":{"type":"agentMessage","id":"codex-item-1","text":"I’ll patch `existing.txt` with the native patch tool, then run the shell command once and report both outcomes.","phase":"commentary"}}}}
+{"out":{"method":"item/started","params":{"threadId":"codex-session","turnId":"codex-wire-1","item":{"type":"fileChange","id":"codex-item-2","changes":[{"path":"/example/project/existing.txt","kind":{"type":"update","move_path":null},"diff":"@@ -1 +1 @@\n-unchanged\n+patched\n"}],"status":"inProgress"}}}}
+{"out":{"method":"item/fileChange/requestApproval","params":{"threadId":"codex-session","turnId":"codex-wire-1","itemId":"codex-item-2","reason":null,"grantRoot":null},"id":0}}
+{"read":"answer1","expect":{"id":0,"result":{"decision":"accept"}}}
+{"out":{"method":"serverRequest/resolved","params":{"threadId":"codex-session","requestId":0}}}
+{"write":"existing.txt","text":"patched\n"}
+{"out":{"method":"item/completed","params":{"threadId":"codex-session","turnId":"codex-wire-1","item":{"type":"fileChange","id":"codex-item-2","changes":[{"path":"/example/project/existing.txt","kind":{"type":"update","move_path":null},"diff":"@@ -1 +1 @@\n-unchanged\n+patched\n"}],"status":"completed"}}}}
+{"out":{"method":"thread/tokenUsage/updated","params":{"threadId":"codex-session","turnId":"codex-wire-1","tokenUsage":{"total":{"inputTokens":16555,"outputTokens":71,"cachedInputTokens":0}}}}}
+{"out":{"method":"item/started","params":{"threadId":"codex-session","turnId":"codex-wire-1","item":{"type":"commandExecution","id":"codex-item-3","command":"/bin/zsh -lc 'printf %s tokamak-permission > command.txt'","cwd":"/example/project","source":"agent","status":"inProgress","exitCode":null}}}}
+{"out":{"method":"item/commandExecution/requestApproval","params":{"threadId":"codex-session","turnId":"codex-wire-1","kind":"command","itemId":"codex-item-3","command":"/bin/zsh -lc 'printf %s tokamak-permission > command.txt'","cwd":"/example/project","availableDecisions":["accept",{"acceptWithExecpolicyAmendment":{"execpolicy_amendment":["/bin/zsh","-lc","printf %s tokamak-permission > command.txt"]}},"cancel"]},"id":1}}
+{"read":"answer2","expect":{"id":1,"result":{"decision":"accept"}}}
+{"out":{"method":"serverRequest/resolved","params":{"threadId":"codex-session","requestId":1}}}
+{"write":"command.txt","text":"tokamak-permission"}
+{"out":{"method":"item/completed","params":{"threadId":"codex-session","turnId":"codex-wire-1","item":{"type":"commandExecution","id":"codex-item-3","command":"/bin/zsh -lc 'printf %s tokamak-permission > command.txt'","cwd":"/example/project","source":"unifiedExecStartup","status":"completed","exitCode":0}}}}
+{"out":{"method":"thread/tokenUsage/updated","params":{"threadId":"codex-session","turnId":"codex-wire-1","tokenUsage":{"total":{"inputTokens":33229,"outputTokens":101,"cachedInputTokens":16512}}}}}
+{"out":{"method":"item/started","params":{"threadId":"codex-session","turnId":"codex-wire-1","item":{"type":"agentMessage","id":"codex-item-4","text":"","phase":"final_answer"}}}}
+{"out":{"method":"item/completed","params":{"threadId":"codex-session","turnId":"codex-wire-1","item":{"type":"agentMessage","id":"codex-item-4","text":"The native patch tool replaced `unchanged` with `patched` in `existing.txt`. The shell command ran once without escalation, exited successfully, and wrote `tokamak-permission` to `command.txt`.","phase":"final_answer"}}}}
+{"out":{"method":"thread/tokenUsage/updated","params":{"threadId":"codex-session","turnId":"codex-wire-1","tokenUsage":{"total":{"inputTokens":49989,"outputTokens":147,"cachedInputTokens":33024}}}}}
+{"out":{"method":"turn/completed","params":{"threadId":"codex-session","turn":{"id":"codex-wire-1","status":"completed"}}}}

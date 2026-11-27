@@ -1,0 +1,24 @@
+# A working turn with every kind of report: thinking, tools (steps), tasks, a helper agent,
+# a plan, the answer and usage. Holds on `pnpm test auth` until a file named `go` appears in
+# the thread's folder, so a test can look at a running step. The last tool is still running
+# when the agent finishes; ai closes it with the turn.
+{"read": "prompt"}
+{"out": {"type": "thinking", "delta": "The session test fails since the refresh change. "}}
+{"out": {"type": "thinking", "delta": "The cached token is the suspect."}}
+{"out": {"type": "tasks", "tasks": [{"text": "Refresh the cached token with the session", "state": "running"}, {"text": "Run the auth tests", "state": "pending"}, {"text": "Push the branch and open a PR", "state": "pending"}]}}
+{"out": {"type": "tool", "id": "read-1", "kind": "read", "title": "src/auth/session.ts", "state": "running"}}
+{"out": {"type": "tool", "id": "read-1", "kind": "read", "title": "src/auth/session.ts", "state": "done"}}
+{"out": {"type": "tool", "id": "search-1", "kind": "search", "title": "refresh(", "state": "running"}}
+{"out": {"type": "tool", "id": "search-1", "kind": "search", "title": "refresh(", "detail": "4", "state": "done"}}
+{"out": {"type": "helper", "id": "helper-1", "name": "Explore", "title": "Find where the token is cached", "state": "running"}}
+{"out": {"type": "helper", "id": "helper-1", "name": "Explore", "title": "Find where the token is cached", "state": "done", "text": "Session.current keeps the token from before refresh()."}}
+{"out": {"type": "tool", "id": "edit-1", "kind": "edit", "title": "src/auth/session.ts", "detail": "+6 −2", "state": "done"}}
+{"out": {"type": "tool", "id": "command-1", "kind": "command", "title": "pnpm test auth", "state": "running"}}
+{"gate": "go"}
+{"out": {"type": "tool", "id": "command-1", "kind": "command", "title": "pnpm test auth", "state": "done"}}
+{"out": {"type": "tasks", "tasks": [{"text": "Refresh the cached token with the session", "state": "done"}, {"text": "Run the auth tests", "state": "done"}, {"text": "Push the branch and open a PR", "state": "pending"}]}}
+{"out": {"type": "plan", "text": "1. Refresh the cached token together with the session.\n2. Run the auth tests.\n3. Push the branch and open a PR."}}
+{"out": {"type": "text", "delta": "The cache outlived the token. I fixed the cache, not the test."}}
+{"out": {"type": "tool", "id": "other-1", "kind": "other", "title": "linear.get_issue", "state": "running"}}
+{"out": {"type": "usage", "usage": {"inputTokens": 12400, "outputTokens": 1100, "cachedInputTokens": 9000, "costUsd": 0.04}}}
+{"out": {"type": "done", "sessionId": "replay-work-session"}}

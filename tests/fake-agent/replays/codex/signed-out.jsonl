@@ -1,0 +1,6 @@
+# Codex 0.170.0 app-server recording; local data removed. The account response represents an empty profile.
+{"read":"init","expect":{"method":"initialize"}}
+{"out":{"id":{"$":"init.id"},"result":{"userAgent":"tokamak/0.170.0 (example-platform)","codexHome":"/example/.codex","platformFamily":"unix","platformOs":"macos"}}}
+{"read":"ready","expect":{"method":"initialized"}}
+{"read":"account","expect":{"method":"account/read"}}
+{"out":{"id":{"$":"account.id"},"result":{"account":null,"userId":null,"requiresOpenaiAuth":true}}}

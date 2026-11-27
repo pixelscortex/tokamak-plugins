@@ -8,6 +8,9 @@
   "scripts": {
     "setup": "./setup.sh",
     "check": "bun scripts/check.ts",
-    "test": "bun scripts/test.ts"
+    "test": "bun scripts/test.ts",
+    "test:server": "bun scripts/suites.ts server",
+    "test:all": "bun scripts/suites.ts all",
+    "test:suite": "bun scripts/suites.ts"
   }
 }

@@ -1,0 +1,6 @@
+# One short turn: one step, then the message said back. For threads with many replies.
+{"read": "prompt"}
+{"out": {"type": "tool", "id": "read-1", "kind": "read", "title": "README.md", "state": "done"}}
+{"out": {"type": "text", "delta": "Done: "}}
+{"out": {"type": "text", "delta": {"$": "prompt.text"}}}
+{"out": {"type": "done", "sessionId": "replay-quick-session"}}

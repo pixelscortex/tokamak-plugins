@@ -1,0 +1,26 @@
+# Claude Code 2.1.331; irrelevant fields and frames omitted; session and input IDs replaced.
+{"read":"initialize","expect":{"type":"control_request","request":{"subtype":"initialize"}}}
+{"out":{"type":"control_response","response":{"subtype":"success","request_id":{"$":"initialize.request_id"},"response":{}}}}
+{"read":"prompt","expect":{"type":"user","message":{"role":"user","content":"Print the integers from 1 through 300, with a separate line for each integer. Do not use tools."},"parent_tool_use_id":null,"session_id":""}}
+{"out":{"type":"system","subtype":"init","session_id":"c1bddeba-3e64-49f8-8ade-323ef9702854"}}
+{"out":{"type":"user","parent_tool_use_id":null,"isReplay":true,"session_id":"c1bddeba-3e64-49f8-8ade-323ef9702854","message":{"role":"user","content":"Print the integers from 1 through 300, with a separate line for each integer. Do not use tools."},"uuid":{"$":"prompt.uuid"}}}
+{"out":{"type":"stream_event","parent_tool_use_id":null,"session_id":"c1bddeba-3e64-49f8-8ade-323ef9702854","event":{"type":"message_start","message":{"id":"msg_011ChPPt8GScNiTJCGjWQBqm"}}}}
+{"out":{"type":"stream_event","parent_tool_use_id":null,"session_id":"c1bddeba-3e64-49f8-8ade-323ef9702854","event":{"type":"content_block_start","index":0,"content_block":{"type":"text","text":""}}}}
+{"out":{"type":"stream_event","parent_tool_use_id":null,"session_id":"c1bddeba-3e64-49f8-8ade-323ef9702854","event":{"type":"content_block_delta","index":0,"delta":{"type":"text_delta","text":"1\n2\n3\n4"}}}}
+{"out":{"type":"stream_event","parent_tool_use_id":null,"session_id":"c1bddeba-3e64-49f8-8ade-323ef9702854","event":{"type":"content_block_delta","index":0,"delta":{"type":"text_delta","text":"\n5\n6\n7\n8"}}}}
+{"read":"interrupt","expect":{"type":"control_request","request":{"subtype":"interrupt"}}}
+{"read":"steer","expect":{"type":"user","message":{"role":"user","content":"Correction: stop listing numbers and say STEERED. Do not use tools."},"parent_tool_use_id":null,"session_id":"c1bddeba-3e64-49f8-8ade-323ef9702854"}}
+{"out":{"type":"control_response","response":{"subtype":"success","request_id":{"$":"interrupt.request_id"}}}}
+{"out":{"type":"assistant","parent_tool_use_id":null,"session_id":"c1bddeba-3e64-49f8-8ade-323ef9702854","message":{"id":"msg_011ChPPt8GScNiTJCGjWQBqm","role":"assistant","content":[{"type":"text","text":"1\n2\n3\n4\n5\n6\n7\n8"}]}}}
+{"out":{"type":"user","parent_tool_use_id":null,"session_id":"c1bddeba-3e64-49f8-8ade-323ef9702854","message":{"role":"user","content":[{"type":"text","text":"[Request interrupted by user]"}]}}}
+{"out":{"type":"stream_event","parent_tool_use_id":null,"session_id":"c1bddeba-3e64-49f8-8ade-323ef9702854","event":{"type":"content_block_stop","index":0}}}
+{"out":{"type":"stream_event","parent_tool_use_id":null,"session_id":"c1bddeba-3e64-49f8-8ade-323ef9702854","event":{"type":"message_stop"}}}
+{"out":{"total_cost_usd":0.08649400000000002,"terminal_reason":"aborted_streaming","is_error":true,"subtype":"error_during_execution","type":"result","session_id":"c1bddeba-3e64-49f8-8ade-323ef9702854","usage":{"input_tokens":0,"cache_creation_input_tokens":0,"cache_read_input_tokens":0,"output_tokens":0}}}
+{"out":{"type":"user","parent_tool_use_id":null,"isReplay":true,"session_id":"c1bddeba-3e64-49f8-8ade-323ef9702854","message":{"role":"user","content":"Correction: stop listing numbers and say STEERED. Do not use tools."},"uuid":{"$":"steer.uuid"}}}
+{"out":{"type":"stream_event","parent_tool_use_id":null,"session_id":"c1bddeba-3e64-49f8-8ade-323ef9702854","event":{"type":"message_start","message":{"id":"msg_011ChPPtFwJT5WmGZH4GiU7Z"}}}}
+{"out":{"type":"stream_event","parent_tool_use_id":null,"session_id":"c1bddeba-3e64-49f8-8ade-323ef9702854","event":{"type":"content_block_start","index":0,"content_block":{"type":"text","text":""}}}}
+{"out":{"type":"stream_event","parent_tool_use_id":null,"session_id":"c1bddeba-3e64-49f8-8ade-323ef9702854","event":{"type":"content_block_delta","index":0,"delta":{"type":"text_delta","text":"STEERED"}}}}
+{"out":{"type":"assistant","parent_tool_use_id":null,"session_id":"c1bddeba-3e64-49f8-8ade-323ef9702854","message":{"id":"msg_011ChPPtFwJT5WmGZH4GiU7Z","role":"assistant","content":[{"type":"text","text":"STEERED"}]}}}
+{"out":{"type":"stream_event","parent_tool_use_id":null,"session_id":"c1bddeba-3e64-49f8-8ade-323ef9702854","event":{"type":"content_block_stop","index":0}}}
+{"out":{"type":"stream_event","parent_tool_use_id":null,"session_id":"c1bddeba-3e64-49f8-8ade-323ef9702854","event":{"type":"message_stop"}}}
+{"out":{"total_cost_usd":0.16711320000000002,"terminal_reason":"completed","is_error":false,"subtype":"success","type":"result","session_id":"c1bddeba-3e64-49f8-8ade-323ef9702854","usage":{"input_tokens":2,"cache_creation_input_tokens":31250,"cache_read_input_tokens":24302,"output_tokens":6},"result":"STEERED"}}

@@ -1,0 +1,12 @@
+# Synthetic Claude stream-JSON replay: the CLI withdraws a pending permission before the user clicks Stop.
+{"read":"initialize","expect":{"type":"control_request","request":{"subtype":"initialize"}}}
+{"out":{"type":"control_response","response":{"subtype":"success","request_id":{"$":"initialize.request_id"},"response":{}}}}
+{"read":"prompt","expect":{"type":"user","message":{"role":"user","content":"Ask before creating a fixture file."}}}
+{"out":{"type":"assistant","session_id":"00000000-0000-4000-8000-000000000000","message":{"role":"assistant","content":[{"type":"tool_use","id":"fixture-tool","name":"Bash","input":{"command":"touch fixture.txt"}}]}}}
+{"out":{"type":"control_request","request_id":"fixture-permission","request":{"subtype":"can_use_tool","tool_name":"Bash","input":{"command":"touch fixture.txt"}}}}
+{"gate":"withdraw-question"}
+{"out":{"type":"control_cancel_request","request_id":"fixture-permission"}}
+{"out":{"type":"assistant","message":{"role":"assistant","content":[{"type":"text","text":"The tool request was withdrawn."}]}}}
+{"read":"interrupt","expect":{"type":"control_request","request":{"subtype":"interrupt"}}}
+{"out":{"type":"control_response","response":{"subtype":"success","request_id":{"$":"interrupt.request_id"},"response":{"still_queued":[]}}}}
+{"out":{"type":"result","subtype":"error_during_execution","is_error":true,"terminal_reason":"aborted_tools","session_id":"00000000-0000-4000-8000-000000000000"}}

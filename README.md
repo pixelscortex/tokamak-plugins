@@ -63,18 +63,40 @@ proto run bun -- run check
 proto run bun -- run test
 ```
 
-`bun run test` runs the plugin unit tests. Server-backed tests move in TKM-318.
+## Tests
+
+After setup, use the pinned Bun to run the suites:
+
+```sh
+proto run bun -- run test:all                # unit tests and all registered suites
+proto run bun -- run test:server             # server-backed suites and replay privacy
+proto run bun -- run test:suite chat-threads # one suite by name
+```
+
+`bun run test` still runs just the plugin unit tests. Set `TOKAMAK_DIR` for
+both setup and tests if the checkout is somewhere other than `../tokamak`.
+The runner prints the checkout commit and builds missing debug binaries there.
+Set `TOKAMAK_SERVER_BIN`, `TOKAMAK_RUNNER_BIN`, or `TOKAMAK_PLUGIN_HOST_BIN`
+to use a different build.
+
+Suites run one at a time and use fake agents. Each gets a fresh folder under
+the system temp directory for data, plugins and CLI configuration. The
+runner removes it on success and prints its path on failure.
 
 ## Sync from Tokamak
 
 ```sh
 TOKAMAK_DIR=/path/to/tokamak ./scripts/sync-from-tokamak.sh          # all eight
 TOKAMAK_DIR=/path/to/tokamak ./scripts/sync-from-tokamak.sh chat ai  # named plugins
+TOKAMAK_DIR=/path/to/tokamak ./scripts/sync-from-tokamak.sh --tests  # shared tests
 ```
 
 The script mirrors the tracked source and design notes, including deletions.
 It preserves local manifests and configurations, and prints the source commit.
-Review and commit the diff after each sync.
+Review and commit the diff after each sync. To refresh the server suites, run
+`--tests` for the drivers, fixtures and fake-agent harness, and sync the
+`claude codex` plugins for their own drivers. Both commands rewrite the copied
+imports for this repository.
 
 ## Layout
 

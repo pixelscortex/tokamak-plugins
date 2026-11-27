@@ -1,0 +1,17 @@
+# Interrupted before turn/start returns; turn/started supplies the turn ID.
+{"read":"init","expect":{"method":"initialize"}}
+{"out":{"id":{"$":"init.id"},"result":{"userAgent":"tokamak/0.170.0 (example-platform)","codexHome":"/example/.codex","platformFamily":"unix","platformOs":"macos"}}}
+{"read":"ready","expect":{"method":"initialized"}}
+{"read":"thread","expect":{"method":"thread/resume","params":{"sandbox":"danger-full-access","approvalPolicy":"never","threadId":"codex-session","excludeTurns":true}}}
+{"out":{"id":{"$":"thread.id"},"result":{"thread":{"id":"codex-session","turns":[]},"model":"gpt-6.1-sol","reasoningEffort":"medium"}}}
+{"read":"turn","expect":{"method":"turn/start","params":{"threadId":"codex-session","input":[{"type":"text","text":"Write a long reply containing 100 numbered facts about apples."}],"effort":"medium"}}}
+{"out":{"method":"thread/tokenUsage/updated","params":{"threadId":"codex-session","turnId":"codex-previous-turn","tokenUsage":{"total":{"totalTokens":116393,"inputTokens":115921,"cachedInputTokens":75648,"cacheWriteInputTokens":0,"outputTokens":472,"reasoningOutputTokens":25},"last":{"totalTokens":21257,"inputTokens":21093,"cachedInputTokens":20608,"cacheWriteInputTokens":0,"outputTokens":164,"reasoningOutputTokens":0},"modelContextWindow":258400}},"emittedAtMs":1700000000000}}
+{"write":"turn-start-pending","text":""}
+{"gate":"stop-requested"}
+{"out":{"method":"turn/started","params":{"threadId":"codex-session","turn":{"id":"codex-stop-turn","rootTurnId":"codex-stop-turn","items":[],"itemsView":"notLoaded","status":"inProgress","error":null,"startedAt":1700000000,"completedAt":null,"durationMs":null}},"emittedAtMs":1700000000000}}
+{"read":"control","expect":{"method":"turn/interrupt","params":{"threadId":"codex-session","turnId":"codex-stop-turn"}}}
+{"out":{"id":{"$":"turn.id"},"result":{"turn":{"id":"codex-stop-turn","rootTurnId":"codex-stop-turn","items":[],"itemsView":"notLoaded","status":"inProgress","error":null,"startedAt":null,"completedAt":null,"durationMs":null}}}}
+{"out":{"method":"item/agentMessage/delta","params":{"threadId":"codex-session","turnId":"codex-stop-turn","itemId":"codex-item-2","delta":". Apples are"},"emittedAtMs":1700000000000}}
+{"out":{"method":"thread/tokenUsage/updated","params":{"threadId":"codex-session","turnId":"codex-stop-turn","tokenUsage":{"total":{"totalTokens":116393,"inputTokens":115921,"cachedInputTokens":75648,"cacheWriteInputTokens":0,"outputTokens":472,"reasoningOutputTokens":25},"last":{"totalTokens":21257,"inputTokens":21093,"cachedInputTokens":20608,"cacheWriteInputTokens":0,"outputTokens":164,"reasoningOutputTokens":0},"modelContextWindow":258400}},"emittedAtMs":1700000000000}}
+{"out":{"id":{"$":"control.id"},"result":{}}}
+{"out":{"method":"turn/completed","params":{"threadId":"codex-session","turn":{"id":"codex-stop-turn","rootTurnId":"codex-stop-turn","items":[],"itemsView":"notLoaded","status":"interrupted","error":null,"startedAt":1700000000,"completedAt":1700000000,"durationMs":0}},"emittedAtMs":1700000000000}}

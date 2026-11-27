@@ -1,0 +1,5 @@
+{"read":"prompt"}
+{"out":{"type":"text","delta":"Partial reply."}}
+{"read":"stop"}
+{"out":{"type":"text","delta":{"$":"stop.type"}}}
+{"out":{"type":"done","sessionId":"replay-stop-session"}}

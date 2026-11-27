@@ -1,0 +1,10 @@
+# Synthetic Claude stream-JSON replay: the CLI declines the action on Cancel and continues to reply.
+{"read":"initialize","expect":{"type":"control_request","request":{"subtype":"initialize"}}}
+{"out":{"type":"control_response","response":{"subtype":"success","request_id":{"$":"initialize.request_id"},"response":{}}}}
+{"read":"prompt","expect":{"type":"user","message":{"role":"user","content":"Ask before creating a fixture file."}}}
+{"out":{"type":"assistant","session_id":"00000000-0000-4000-8000-000000000000","message":{"role":"assistant","content":[{"type":"tool_use","id":"fixture-tool","name":"Bash","input":{"command":"touch fixture.txt"}}]}}}
+{"out":{"type":"control_request","request_id":"fixture-permission","request":{"subtype":"can_use_tool","tool_name":"Bash","input":{"command":"touch fixture.txt"}}}}
+{"read":"answer","exact":true,"expect":{"type":"control_response","response":{"subtype":"success","request_id":"fixture-permission","response":{"behavior":"deny","message":"Declined by the user.","interrupt":true}}}}
+{"out":{"type":"user","message":{"role":"user","content":[{"type":"tool_result","tool_use_id":"fixture-tool","is_error":true,"content":"Permission denied."}]}}}
+{"out":{"type":"assistant","message":{"role":"assistant","content":[{"type":"text","text":"I continued without using the tool."}]}}}
+{"out":{"type":"result","subtype":"success","is_error":false,"session_id":"00000000-0000-4000-8000-000000000000"}}

@@ -1,0 +1,139 @@
+tests/e2e/browser/plugin-screens.spec.ts
+  s_b598966dd7fffe::t_87178350bd98ea 1-450
+README.md
+  s_b598966dd7fffe::t_f665e8a402e5e4 99,102-105,107-114
+  s_b598966dd7fffe::t_e229f0cabe47d4 106,125-128
+  s_f713877a28d05b::t_cfaa8a6b691622 100-101
+  s_f713877a28d05b::t_3104e68155e44f 71,86-98
+tests/e2e/browser/screen-capture.ts
+  s_b598966dd7fffe::t_87178350bd98ea 1
+  s_b598966dd7fffe::t_4032dee83e2d88 2-7
+plugins/agent-proxy/tests/cli.test.ts
+  s_f713877a28d05b::t_b3842141b7142d 1-267
+tests/fake-agent/profile-turns.mjs
+  s_f713877a28d05b::t_b3842141b7142d 1,6,95
+tests/support/server-vitest.config.ts
+  s_f713877a28d05b::t_26ee8362860c75 1-13
+package.json
+  s_b598966dd7fffe::t_acf0cff7815efe 13
+setup.sh
+  s_b598966dd7fffe::t_acf0cff7815efe 78
+plugins/agent-proxy/tests/cli-sandbox.ts
+  s_f713877a28d05b::t_b3842141b7142d 1-83
+plugins/agent-proxy/tests/addresses.test.ts
+  s_f713877a28d05b::t_b3842141b7142d 1-48,50-70,72-85,89-94,96-155
+  s_f713877a28d05b::t_4d52b4c567c9b9 49,71,86-88,95
+plugins/agent-proxy/tests/manage-companies.test.ts
+  s_f713877a28d05b::t_b3842141b7142d 1-144
+tests/e2e/browser/ai-quit.spec.ts
+  s_b598966dd7fffe::t_87178350bd98ea 1-131
+tests/e2e/browser/ai.spec.ts
+  s_b598966dd7fffe::t_4032dee83e2d88 11,82
+  s_b598966dd7fffe::t_87178350bd98ea 1-10,12-81,83-450
+tests/e2e/hosted-fixture.ts
+  s_b598966dd7fffe::t_87178350bd98ea 1-68
+tests/runner/support/agent-channel.mjs
+  s_f713877a28d05b::t_b3842141b7142d 1-531
+plugins/agent-proxy/tests/proxy.test.ts
+  s_f713877a28d05b::t_b3842141b7142d 1-868
+tests/runner/support/agents.mjs
+  s_f713877a28d05b::t_b3842141b7142d 1-2,4,7-17,22-25,31-68
+  s_f713877a28d05b::t_1b88914828c3b5 3,5-6,18-21,26-30
+tests/starter.mjs
+  s_f713877a28d05b::t_b3842141b7142d 1-66
+tests/support/starter-plugins.ts
+  s_f713877a28d05b::t_b3842141b7142d 1-13
+tests/server/chat-schema-driver.mjs
+  s_f713877a28d05b::t_8158b5e4f27b96 1-92
+tests/fake-agent/harness.mjs
+  s_f713877a28d05b::t_8158b5e4f27b96 121,136
+tests/runner/measure-linux-memory.mjs
+  s_f713877a28d05b::t_b3842141b7142d 1-188
+plugins/agent-proxy/tests/chatgpt-sign-in.test.ts
+  s_f713877a28d05b::t_b3842141b7142d 1-327
+tests/e2e/browser/agent-picker.ts
+  s_b598966dd7fffe::t_87178350bd98ea 1-62
+tests/e2e/browser/chat.spec.ts
+  s_b598966dd7fffe::t_87178350bd98ea 1-118
+scripts/suites.ts
+  s_b598966dd7fffe::t_acf0cff7815efe 11,96,106-116,135,149-152
+  s_f713877a28d05b::t_096fa7959641a4 1-2,8,20-26,36-37,43-44,54-58,117,129,156,189
+  s_b598966dd7fffe::t_d8d0f05606d001 175-178
+  s_f713877a28d05b::t_b1b3e28699c2eb 79,118-128,159-165,186-187
+plugins/ai-profiles/DESIGN.md
+  s_f713877a28d05b::t_b3842141b7142d 20,335
+plugins/ai-profiles/tests/vitest.config.ts
+  s_f713877a28d05b::t_b3842141b7142d 1,6-13,15-16
+  s_f713877a28d05b::t_1b88914828c3b5 14
+plugins/agent-proxy/package.json
+  s_f713877a28d05b::t_b3842141b7142d 7
+tests/support/build-plugins.ts
+  s_f713877a28d05b::t_26ee8362860c75 1-33
+tests/e2e/browser/ai-thread.spec.ts
+  s_b598966dd7fffe::t_87178350bd98ea 1-10,12-158
+  s_b598966dd7fffe::t_4032dee83e2d88 11
+scripts/sync.ts
+  s_f713877a28d05b::t_226bd026f81834 20-21,87-94,96,163-174,184-206,208,217-233,254,256-259,261-262,268
+  s_f713877a28d05b::t_8158b5e4f27b96 138-141
+  s_b598966dd7fffe::t_4032dee83e2d88 82,150-155
+  s_f713877a28d05b::t_4f33fdc8ac9883 175-183
+  s_b598966dd7fffe::t_87178350bd98ea 79-81,83-86,95,145-149,156-162,255
+  s_b598966dd7fffe::t_95793b316d2723 207,209-216,337
+tests/e2e/serve-hosted.ts
+  s_b598966dd7fffe::t_87178350bd98ea 1-6
+tests/e2e/serve.ts
+  s_b598966dd7fffe::t_87178350bd98ea 1-29
+plugins/agent-proxy/tests/manage.test.ts
+  s_f713877a28d05b::t_b3842141b7142d 1-430
+plugins/agent-proxy/tests/workspace.ts
+  s_f713877a28d05b::t_b3842141b7142d 1-298
+tests/e2e/browser/code.spec.ts
+  s_b598966dd7fffe::t_87178350bd98ea 1-373
+plugins/ai-profiles/tests/profiles-server.test.ts
+  s_f713877a28d05b::t_b3842141b7142d 1-364
+tests/runner/agent-routing.mjs
+  s_f713877a28d05b::t_b3842141b7142d 1-288
+.gitignore
+  s_b598966dd7fffe::t_acf0cff7815efe 10-12
+tests/runner/support/scratch.mjs
+  s_f713877a28d05b::t_b3842141b7142d 1-13
+tests/e2e/browser/thread-list.spec.ts
+  s_b598966dd7fffe::t_4032dee83e2d88 8
+  s_b598966dd7fffe::t_87178350bd98ea 1-7,9-102
+tests/e2e/browser/desktop.ts
+  s_b598966dd7fffe::t_87178350bd98ea 1-161
+plugins/agent-proxy/tests/sign-in.test.ts
+  s_f713877a28d05b::t_b3842141b7142d 1-488
+tests/runner/measure-first-text.mjs
+  s_f713877a28d05b::t_b3842141b7142d 1-155
+tests/e2e/browser.ts
+  s_b598966dd7fffe::t_b644c2041d2978 1-111
+tests/e2e/playwright.config.ts
+  s_b598966dd7fffe::t_0273477cbc304f 1-51
+tests/e2e/ports.ts
+  s_b598966dd7fffe::t_ab25174151bc0c 1-6
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "59889fcf16f2f5b7fe5468fcb4ebcf507aff0d9a",
+  "prompts": {},
+  "sessions": {
+    "s_b598966dd7fffe": {
+      "agent_id": {
+        "tool": "codex",
+        "id": "01a21a50-e534-7981-8653-4b7589638691",
+        "model": "gpt-6.2-sol"
+      },
+      "human_author": "JustKira <shighgamerhg@gmail.com>"
+    },
+    "s_f713877a28d05b": {
+      "agent_id": {
+        "tool": "codex",
+        "id": "01a21a50-86d5-7070-b4dc-8c3343e2c361",
+        "model": "gpt-6.2-sol"
+      },
+      "human_author": "JustKira <shighgamerhg@gmail.com>"
+    }
+  }
+}

@@ -26,9 +26,9 @@ app's plugins folder. See `README.md` for setup and install.
 - **Installing.** `./install.sh [--dev] [id...]`. Test against a throwaway
   folder (`TOKAMAK_PLUGIN_DIR`, `TOKAMAK_SERVER_DIR`) unless told to install
   into the owner's app.
-- **Sync.** Run `TOKAMAK_DIR=/path/to/tokamak ./scripts/sync-from-tokamak.sh [id...]`
-  to copy `chat`, `ai`, `code`, `claude`, `codex`, `basic-auth`,
-  `agent-proxy` and `ai-profiles`. With no IDs it syncs all eight.
+- **Home.** This repository is the only copy of the plugins and their tests.
+  Tokamak has no `plugins/` folder. A package a plugin imports that Tokamak
+  does not install goes in `deps/package.json` (with `deps/bun.lock`).
 - **Checks.** Run `./install.sh` into a throwaway folder first to generate
   the types for imports between plugins. Then run `bun run check` and
   `bun run test:all` with the pinned Bun. Use `bun run test:suite <name>`

@@ -21,8 +21,14 @@ TOKAMAK_DIR=/path/to/tokamak ./setup.sh
 ```
 
 `setup.sh` links `@tokamak/sdk`, `@tokamak/build`, `@tokamak/ui` and
-`@tokamak/runtime`, plus the plugins' build and test dependencies, into `node_modules`. Run it
-again after moving the checkout; it only replaces its own links.
+`@tokamak/runtime`, plus the plugins' build and test dependencies, into `node_modules`.
+Packages a plugin uses that Tokamak does not install (today `marked`) are
+declared in `deps/package.json`; setup installs them there from `deps/bun.lock`
+and links them too. Run it again after moving the checkout; it only replaces
+its own links.
+
+This repository is the only home of the plugins: Tokamak no longer has a
+`plugins/` folder.
 
 ## Install
 
@@ -112,24 +118,13 @@ be free; set `TOKAMAK_E2E_PORT` to override 1420. Set `TOKAMAK_SCREENS` to an
 output directory to enable the screenshot specs. Failure traces and the HTML
 report are under `.ci-results/playwright*`.
 
-## Sync from Tokamak
-
-```sh
-TOKAMAK_DIR=/path/to/tokamak ./scripts/sync-from-tokamak.sh          # all eight
-TOKAMAK_DIR=/path/to/tokamak ./scripts/sync-from-tokamak.sh chat ai  # named plugins
-TOKAMAK_DIR=/path/to/tokamak ./scripts/sync-from-tokamak.sh --tests  # shared tests
-```
-
-The script mirrors the tracked source and design notes, including deletions.
-It preserves local manifests and configurations, and prints the source commit.
-Review and commit the diff after each sync. Run `--tests` to refresh the
-shared drivers, fixtures, browser specs and fake-agent harness. Sync the
-`claude codex agent-proxy ai-profiles` plugins for their own tests. Both
-commands rewrite the copied imports for this repository.
-
 ## Layout
 
 - `plugins/<id>/`: one plugin per folder, named by its id, with its
   `DESIGN.md`. `hello` is the smallest working example: one server function
   and one page that shows its result.
 - `setup.sh`, `install.sh`: the two commands above. The work is in `scripts/`.
+- `deps/`: packages the plugins import that Tokamak does not install, with
+  their own lockfile. `setup.sh` installs and links them.
+- `tests/`: the server, runner and browser suites, run against a Tokamak
+  checkout by `scripts/suites.ts`.

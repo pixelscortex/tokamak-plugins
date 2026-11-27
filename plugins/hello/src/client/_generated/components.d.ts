@@ -6,4 +6,4 @@ export declare const find: import("@tokamak/sdk/client").ScreenFind<{
   "p": [["Hello" | "section", {}, {"role":"status"}], ["Hello" | "section", {}, {"role":"alert"}]];
 }, {
   "Hello": [[never, {}]];
-}>;
+}, {}>;

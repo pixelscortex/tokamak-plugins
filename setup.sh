@@ -44,28 +44,21 @@ link() {
   echo "  $name -> $target"
 }
 
-# Resolve packages with no stable workspace path in Bun's install store.
-# A peer-qualified instance can have a suffix after the version.
-store_package() {
-  local name="$1" version="$2" dir
-  local key="${name/\//+}@$version"
-  local paths=()
-  for dir in "$tokamak/node_modules/.bun/$key" "$tokamak/node_modules/.bun/$key"+*; do
-    [ -f "$dir/node_modules/$name/package.json" ] && paths+=("$dir/node_modules/$name")
-  done
-  if [ "${#paths[@]}" -ne 1 ]; then
-    fail "expected one copy of $name@$version in $tokamak/node_modules/.bun, found ${#paths[@]}. Run 'proto run bun -- install --frozen-lockfile' in $tokamak."
-  fi
-  echo "${paths[0]#"$tokamak/"}"
-}
-
-marked="$(store_package marked 18.2.0)"
+# Packages the plugins import that Tokamak itself does not install. They are
+# declared in deps/package.json, pinned by deps/bun.lock and installed there.
+echo "Installing the plugins' own packages in deps/"
+if command -v proto >/dev/null 2>&1; then
+  (cd "$repo/deps" && proto run bun -- install --frozen-lockfile)
+else
+  (cd "$repo/deps" && bun install --frozen-lockfile)
+fi
 
 # Name in node_modules, then the folder in the checkout it links to.
 # Tokamak's own packages: the SDK, the builder, the UI kit and the runtime.
 # Then the toolchain a plugin with a window imports or type-checks against,
 # taken from the checkout's own installs so the versions always match what
-# Tokamak builds with. A plugin that imports anything else needs it added here.
+# Tokamak builds with. A plugin that imports anything else Tokamak does not
+# install adds it to deps/package.json (then run `bun install` in deps/).
 links=(
   "@tokamak/sdk" "packages/sdk"
   "@tokamak/build" "packages/build"
@@ -85,17 +78,26 @@ links=(
   "@solidjs/vite-plugin" "packages/build/node_modules/@solidjs/vite-plugin"
   "@ui-sdk/core" "packages/ui/node_modules/@ui-sdk/core"
   "@ui-sdk/solid" "packages/ui/node_modules/@ui-sdk/solid"
-  "marked" "$marked"
+)
+# From deps/, not from the checkout.
+own=(
+  "marked" "deps/node_modules/marked"
 )
 
 # Check everything first, so a problem never leaves half the links changed.
 for ((i = 0; i < ${#links[@]}; i += 2)); do
   check "${links[i]}" "$tokamak/${links[i + 1]}"
 done
+for ((i = 0; i < ${#own[@]}; i += 2)); do
+  check "${own[i]}" "$repo/${own[i + 1]}"
+done
 
 echo "Linking from the Tokamak checkout at $tokamak"
 for ((i = 0; i < ${#links[@]}; i += 2)); do
   link "${links[i]}" "$tokamak/${links[i + 1]}"
+done
+for ((i = 0; i < ${#own[@]}; i += 2)); do
+  link "${own[i]}" "$repo/${own[i + 1]}"
 done
 
 echo "Tokamak commit: $(git -C "$tokamak" rev-parse --short HEAD 2>/dev/null || echo unknown)"

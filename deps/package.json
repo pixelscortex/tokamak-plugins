@@ -1,0 +1,8 @@
+{
+  "name": "tokamak-plugins-deps",
+  "private": true,
+  "description": "Packages the plugins import that no Tokamak checkout installs. setup.sh installs them here and links them into node_modules.",
+  "dependencies": {
+    "marked": "18.2.0"
+  }
+}

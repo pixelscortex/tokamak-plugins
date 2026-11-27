@@ -1,0 +1,255 @@
+tests/fake-agent/replays/claude-info.jsonl
+  s_466ae8ff2aba80::t_4203862ef6651a 1-3
+tests/fake-agent/replays/claude-refuse.jsonl
+  s_466ae8ff2aba80::t_4203862ef6651a 1-18
+tests/fake-agent/replays/codex/history.jsonl
+  s_466ae8ff2aba80::t_4203862ef6651a 1-40
+tests/fake-agent/replays/no-steer.jsonl
+  s_466ae8ff2aba80::t_4203862ef6651a 1-4
+scripts/sync.ts
+  s_466ae8ff2aba80::t_5304b36b71f01c 86-90,101
+  s_466ae8ff2aba80::t_ffc5a1adf2d0b0 173-175
+  s_466ae8ff2aba80::t_4203862ef6651a 2,20,75-85,91-100,102-121,126-129,133-172,176-181,183,185,216,225,227-229,235
+  s_466ae8ff2aba80::t_40d730f0c97d34 122-125,130-132
+README.md
+  s_466ae8ff2aba80::t_033acfaa721c69 66-84,91,96-99
+tests/server/code-changes-driver.mjs
+  s_466ae8ff2aba80::t_4203862ef6651a 1-350
+tests/fake-agent/agents/fake-agent/package.json
+  s_466ae8ff2aba80::t_4203862ef6651a 1-6
+tests/server/fixtures/chat-reply-probe/plugin.ts
+  s_466ae8ff2aba80::t_4203862ef6651a 1-4
+tests/fake-agent/no-bun-action/src/server/probe.ts
+  s_466ae8ff2aba80::t_4203862ef6651a 1-3
+tests/fake-agent/replays/codex/helper-approval.jsonl
+  s_466ae8ff2aba80::t_4203862ef6651a 1-41
+tests/fake-agent/no-bun.mjs
+  s_466ae8ff2aba80::t_4203862ef6651a 1-123
+tests/fake-agent/replays/claude-steer-race.jsonl
+  s_466ae8ff2aba80::t_4203862ef6651a 1-23
+tests/fake-agent/replays/slow.jsonl
+  s_466ae8ff2aba80::t_4203862ef6651a 1-8
+tests/server/fixtures/chat-reply-probe/package.json
+  s_466ae8ff2aba80::t_4203862ef6651a 1-5
+tests/fake-agent/replays/ask-session.jsonl
+  s_466ae8ff2aba80::t_4203862ef6651a 1-15
+tests/fake-agent/replays/stop.jsonl
+  s_466ae8ff2aba80::t_4203862ef6651a 1-5
+tests/fake-agent/replays/claude-remember-resume.jsonl
+  s_466ae8ff2aba80::t_4203862ef6651a 1-25
+tests/fake-agent/replays/claude-withdraw-question.jsonl
+  s_466ae8ff2aba80::t_4203862ef6651a 1-12
+tests/fake-agent/replays/thinks-and-runs.jsonl
+  s_466ae8ff2aba80::t_4203862ef6651a 1-8
+tests/fake-agent/replays/codex/full-approval.jsonl
+  s_466ae8ff2aba80::t_4203862ef6651a 1-18
+tests/fake-agent/replays/codex/early-stop.jsonl
+  s_466ae8ff2aba80::t_4203862ef6651a 1-17
+tests/fake-agent/replays/claude-after-crash.jsonl
+  s_466ae8ff2aba80::t_4203862ef6651a 1-12
+tests/fake-agent/replays/claude-hello.jsonl
+  s_466ae8ff2aba80::t_4203862ef6651a 1-13
+tests/fake-agent/replays/work.jsonl
+  s_466ae8ff2aba80::t_4203862ef6651a 1-24
+tests/fake-agent/replays/ignore-stop.jsonl
+  s_466ae8ff2aba80::t_4203862ef6651a 1-7
+tests/server/code-snapshot-process-cases.mjs
+  s_466ae8ff2aba80::t_4203862ef6651a 1-539
+plugins/claude/tests/replay.mjs
+  s_466ae8ff2aba80::t_4203862ef6651a 1-136
+tests/server/fixtures/ai-rows-probe/probe.ts
+  s_466ae8ff2aba80::t_4203862ef6651a 1-28
+tests/fake-agent/replays/claude-stop-asking.jsonl
+  s_466ae8ff2aba80::t_4203862ef6651a 1-16
+tests/fake-agent/replays/codex/signed-out.jsonl
+  s_466ae8ff2aba80::t_4203862ef6651a 1-6
+package.json
+  s_466ae8ff2aba80::t_4d7d70d12eff3b 11-14
+tests/fake-agent/no-bun-action/plugin.ts
+  s_466ae8ff2aba80::t_4203862ef6651a 1-3
+tests/fake-agent/replays/codex/stop.jsonl
+  s_466ae8ff2aba80::t_4203862ef6651a 1-16
+plugins/claude/tests/turns.mjs
+  s_466ae8ff2aba80::t_4203862ef6651a 1-535
+tests/fake-agent/replays/claude-cancel-continues.jsonl
+  s_466ae8ff2aba80::t_4203862ef6651a 1-10
+tests/fake-agent/replays/claude-todo-list.jsonl
+  s_466ae8ff2aba80::t_4203862ef6651a 1-134
+tests/fake-agent/replays/codex/info.jsonl
+  s_466ae8ff2aba80::t_4203862ef6651a 1-12
+tests/fake-agent/replays/codex/plan.jsonl
+  s_466ae8ff2aba80::t_4203862ef6651a 1-22
+tests/fake-agent/launch-settings.mjs
+  s_466ae8ff2aba80::t_4203862ef6651a 1-209
+tests/fake-agent/replays/echo.jsonl
+  s_466ae8ff2aba80::t_4203862ef6651a 1-9
+tests/fake-agent/replays/claude-remember.jsonl
+  s_466ae8ff2aba80::t_4203862ef6651a 1-23
+tests/fake-agent/replays/codex/accept.jsonl
+  s_466ae8ff2aba80::t_4203862ef6651a 1-31
+AGENTS.md
+  s_466ae8ff2aba80::t_033acfaa721c69 34-35
+tests/fake-agent/replays/claude-history.jsonl
+  s_466ae8ff2aba80::t_4203862ef6651a 1-12
+tests/fake-agent/replays/claude-scope.jsonl
+  s_466ae8ff2aba80::t_4203862ef6651a 1-23
+tests/fake-agent/replays/ask-once.jsonl
+  s_466ae8ff2aba80::t_4203862ef6651a 1-7
+tests/fake-agent/replays/quick.jsonl
+  s_466ae8ff2aba80::t_4203862ef6651a 1-6
+tests/fake-agent/profile-codex.mjs
+  s_466ae8ff2aba80::t_4203862ef6651a 1-77
+plugins/claude/tests/permissions.mjs
+  s_466ae8ff2aba80::t_4203862ef6651a 1-208
+tests/server/code-snapshots-driver.mjs
+  s_466ae8ff2aba80::t_4203862ef6651a 1-486
+tests/fake-agent/agents/fake-agent/src/client/api.tsx
+  s_466ae8ff2aba80::t_4203862ef6651a 1-15
+tests/fake-agent/program.mjs
+  s_466ae8ff2aba80::t_4203862ef6651a 1-188
+tests/server/chat-threads-driver.mjs
+  s_466ae8ff2aba80::t_4203862ef6651a 1-275,277
+  s_466ae8ff2aba80::t_4afdae486ca38d 276
+tests/fake-agent/replays/claude-steer.jsonl
+  s_466ae8ff2aba80::t_4203862ef6651a 1-26
+tests/fake-agent/replays/codex/hello.jsonl
+  s_466ae8ff2aba80::t_4203862ef6651a 1-12
+tests/fake-agent/agents/other-agent/package.json
+  s_466ae8ff2aba80::t_4203862ef6651a 1-6
+tests/fake-agent/replays/claude-resistant.jsonl
+  s_466ae8ff2aba80::t_4203862ef6651a 1-11
+tests/fake-agent/replays/claude-steer-stop.jsonl
+  s_466ae8ff2aba80::t_4203862ef6651a 1-19
+tests/fake-agent/replays/edit.jsonl
+  s_466ae8ff2aba80::t_4203862ef6651a 1-5
+tests/fake-agent/replays/codex/linked-hello.jsonl
+  s_466ae8ff2aba80::t_4203862ef6651a 1-13
+tests/fake-agent/agents/factory.ts
+  s_466ae8ff2aba80::t_4203862ef6651a 1-183
+tests/fake-agent/replays/codex/acceptForSession.jsonl
+  s_466ae8ff2aba80::t_4203862ef6651a 1-24
+tests/fake-agent/replays/codex/edit.jsonl
+  s_466ae8ff2aba80::t_4203862ef6651a 1-29
+tests/fake-agent/build-fixtures.mjs
+  s_466ae8ff2aba80::t_4203862ef6651a 1-7
+tests/fake-agent/no-bun-action/src/server/api.ts
+  s_466ae8ff2aba80::t_4203862ef6651a 1
+tests/fake-agent/start-runner.ts
+  s_466ae8ff2aba80::t_4203862ef6651a 1-70
+tests/fake-agent/profile-turns.mjs
+  s_466ae8ff2aba80::t_4203862ef6651a 1-442
+tests/fake-agent/replays/steer.jsonl
+  s_466ae8ff2aba80::t_4203862ef6651a 1-9
+tests/fake-agent/replays/bad-report.jsonl
+  s_466ae8ff2aba80::t_4203862ef6651a 1-7
+tests/fake-agent/replays/claude-plan.jsonl
+  s_466ae8ff2aba80::t_4203862ef6651a 1-27
+tests/fake-agent/replays/codex/steer.jsonl
+  s_466ae8ff2aba80::t_4203862ef6651a 1-18
+tests/fake-agent/replays/claude-steer-tools.jsonl
+  s_466ae8ff2aba80::t_4203862ef6651a 1-21
+tests/server/ai-liveness-driver.mjs
+  s_466ae8ff2aba80::t_4203862ef6651a 1-340
+tests/fake-agent/agents/fake-agent/plugin.ts
+  s_466ae8ff2aba80::t_4203862ef6651a 1-5
+tests/fake-agent/replays/claude-stop-tools.jsonl
+  s_466ae8ff2aba80::t_4203862ef6651a 1-11
+tests/fake-agent/replays/context.jsonl
+  s_466ae8ff2aba80::t_4203862ef6651a 1-8
+tests/fake-agent/replays/claude-stop.jsonl
+  s_466ae8ff2aba80::t_4203862ef6651a 1-13
+tests/support/routing.mjs
+  s_466ae8ff2aba80::t_4203862ef6651a 1-50,52-113
+  s_466ae8ff2aba80::t_e5498096d8f4a4 51
+tests/server/code-snapshot-review-cases.mjs
+  s_466ae8ff2aba80::t_4203862ef6651a 1-212
+tests/fake-agent/replay-privacy.mjs
+  s_466ae8ff2aba80::t_4203862ef6651a 1-165
+tests/fake-agent/replays/claude-steer-twice.jsonl
+  s_466ae8ff2aba80::t_4203862ef6651a 1-31
+tests/fake-agent/replays/fail.jsonl
+  s_466ae8ff2aba80::t_4203862ef6651a 1-5
+tests/fake-agent/no-bun-action/package.json
+  s_466ae8ff2aba80::t_4203862ef6651a 1-5
+tests/fake-agent/replays/claude-lost.jsonl
+  s_466ae8ff2aba80::t_4203862ef6651a 1-3
+tests/fake-agent/agents/fake-agent/src/server/agent.ts
+  s_466ae8ff2aba80::t_4203862ef6651a 1-9
+tests/fake-agent/agent-turn.mjs
+  s_466ae8ff2aba80::t_4203862ef6651a 1-168
+tests/fake-agent/agents/other-agent/src/server/agent.ts
+  s_466ae8ff2aba80::t_4203862ef6651a 1-14
+tests/fake-agent/replays/codex/helpers.jsonl
+  s_466ae8ff2aba80::t_4203862ef6651a 1-22
+tests/fake-agent/replays/codex/cancel.jsonl
+  s_466ae8ff2aba80::t_4203862ef6651a 1-18
+tests/support/replay-privacy.mjs
+  s_466ae8ff2aba80::t_4d7d70d12eff3b 1-24
+tests/fake-agent/replays/edit-stop.jsonl
+  s_466ae8ff2aba80::t_4203862ef6651a 1-5
+plugins/codex/tests/e2e.mjs
+  s_466ae8ff2aba80::t_4203862ef6651a 1-524
+tests/fake-agent/replays/edit-fail.jsonl
+  s_466ae8ff2aba80::t_4203862ef6651a 1-5
+tests/fake-agent/harness.mjs
+  s_466ae8ff2aba80::t_4203862ef6651a 1-285,287-308,310-527,529-531
+  s_466ae8ff2aba80::t_fe039597298e0e 286,309,528
+plugins/claude/tests/overlap.mjs
+  s_466ae8ff2aba80::t_4203862ef6651a 1-113
+tests/fake-agent/README.md
+  s_466ae8ff2aba80::t_4203862ef6651a 1-63,66-68
+  s_466ae8ff2aba80::t_cbbfa5fa3d3c9b 64-65
+tests/support/paths.mjs
+  s_466ae8ff2aba80::t_4203862ef6651a 2-7,9-17
+  s_466ae8ff2aba80::t_8d4dacc7644829 1,8
+tests/server/ai-turns-driver.mjs
+  s_466ae8ff2aba80::t_4203862ef6651a 1-1009
+tests/fake-agent/replays/long-thinking.jsonl
+  s_466ae8ff2aba80::t_4203862ef6651a 1-18
+plugins/claude/tests/snapshots.mjs
+  s_466ae8ff2aba80::t_4203862ef6651a 1-110
+tests/fake-agent/local.mjs
+  s_466ae8ff2aba80::t_4203862ef6651a 1-125
+tests/fake-agent/replays/claude-cancel.jsonl
+  s_466ae8ff2aba80::t_4203862ef6651a 1-13
+tests/fake-agent/replays/stall-after-gate.jsonl
+  s_466ae8ff2aba80::t_4203862ef6651a 1-8
+tests/server/ai-threads-driver.mjs
+  s_466ae8ff2aba80::t_4203862ef6651a 1-352
+scripts/suites.ts
+  s_466ae8ff2aba80::t_ffc5a1adf2d0b0 2,33-34,36-38,49,98,130-137,141-144
+  s_466ae8ff2aba80::t_4d7d70d12eff3b 1,3-32,35,39-48,50-63,65-66,68-97,99-129,138-140,145-147
+  s_466ae8ff2aba80::t_c81402cea33e50 64,67
+tests/fake-agent/replays/codex/decline.jsonl
+  s_466ae8ff2aba80::t_4203862ef6651a 1-22
+tests/fake-agent/replays/claude-resume.jsonl
+  s_466ae8ff2aba80::t_4203862ef6651a 1-11
+plugins/claude/tests/turn-wire.mjs
+  s_466ae8ff2aba80::t_4203862ef6651a 1-48
+tests/server/fixtures/chat-reply-probe/src/server/replies.ts
+  s_466ae8ff2aba80::t_4203862ef6651a 1-18
+tests/fake-agent/agents/other-agent/plugin.ts
+  s_466ae8ff2aba80::t_4203862ef6651a 1-5
+tests/fake-agent/replays/claude-permit.jsonl
+  s_466ae8ff2aba80::t_4203862ef6651a 1-28
+tests/fake-agent/agents/fake-agent/src/server/factory.ts
+  s_466ae8ff2aba80::t_118be90ca6b2d6 1
+tests/fake-agent/agents/other-agent/src/server/factory.ts
+  s_466ae8ff2aba80::t_ed60427ba38825 1
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "71399106bf1ddf87d53920d6fd966e6ab136a55b",
+  "prompts": {},
+  "sessions": {
+    "s_466ae8ff2aba80": {
+      "agent_id": {
+        "tool": "codex",
+        "id": "01a21a34-c315-7c30-b4e8-4f7047dc8a07",
+        "model": "gpt-6.2-sol"
+      },
+      "human_author": "JustKira <shighgamerhg@gmail.com>"
+    }
+  }
+}

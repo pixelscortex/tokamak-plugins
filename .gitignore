@@ -7,3 +7,6 @@ dist/
 
 # Builder-generated type facades and test fixtures.
 .tokamak/
+
+# Playwright traces and reports.
+.ci-results/

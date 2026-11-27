@@ -1,8 +1,9 @@
-import { testModules, tokamakDir } from "../support/paths.mjs";
+import { testModules } from "../support/paths.mjs";
 import assert from "node:assert/strict";
 import { cp, mkdir, readFile, rename, writeFile } from "node:fs/promises";
 import { isAbsolute, join } from "node:path";
 import { createApi, isFailure } from "../../node_modules/@tokamak/sdk/src/index.ts";
+import { blockingProxy } from "../../plugins/agent-proxy/tests/cli-sandbox.ts";
 import { startFakeCompanies } from "../../plugins/agent-proxy/tests/fake-companies/index.ts";
 import { api } from "../../plugins/ai-profiles/src/server/_generated/api.ts";
 import { agentTurns } from "./agent-turn.mjs";
@@ -91,7 +92,7 @@ export default provide(agent, { id: "claude", name: "Recording Claude", info, st
   const installedCodex = offlineCodex === "1" ? Bun.which("codex") : offlineCodex;
   assert.ok(offlineCodex !== "1" || installedCodex, "Offline Codex CLI was not found on PATH");
   assert.ok(!installedCodex || isAbsolute(installedCodex));
-  const blocked = installedCodex ? await (await import(join(tokamakDir, "plugins/agent-proxy/tests/cli-sandbox.ts"))).blockingProxy() : null;
+  const blocked = installedCodex ? await blockingProxy() : null;
   const codex = installedCodex
     ? `exec ${JSON.stringify(installedCodex)} -c 'cli_auth_credentials_store="file"' "$@"`
     : `exec ${JSON.stringify(bunPath())} ${JSON.stringify(join(workspace, "tests/fake-agent/profile-codex.mjs"))} "$@"`;

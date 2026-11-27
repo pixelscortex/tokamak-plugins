@@ -4,6 +4,6 @@
   "private": true,
   "type": "module",
   "scripts": {
-    "test": "bun ../../node_modules/vitest/vitest.mjs run tests --disableConsoleIntercept"
+    "test": "bun ../../node_modules/vitest/vitest.mjs run tests --exclude 'tests/{addresses,chatgpt-sign-in,manage-companies,manage,sign-in,proxy,cli}.test.ts' --disableConsoleIntercept"
   }
 }

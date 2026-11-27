@@ -118,6 +118,7 @@ export async function buildAgentPlugins(scratch, install = (id) => join(scratch,
 export async function startServer({
   binary,
   dir,
+  dataDir = join(dir, "store"),
   pluginsDir,
   shared,
   localDir,
@@ -132,7 +133,7 @@ export async function startServer({
   stderr = "inherit",
 }) {
   await mkdir(dir);
-  const args = ["--plugins", pluginsDir, "--data", join(dir, "store"), "--listen", "127.0.0.1:0"];
+  const args = ["--plugins", pluginsDir, "--data", dataDir, "--listen", "127.0.0.1:0"];
   if (callMs !== undefined) args.push("--call-ms", String(callMs));
   if (heapBytes !== undefined) args.push("--heap-bytes", String(heapBytes));
   if (localDir) args.push("--local-dir", localDir);

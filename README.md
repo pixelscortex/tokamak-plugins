@@ -68,7 +68,7 @@ proto run bun -- run test
 After setup, use the pinned Bun to run the suites:
 
 ```sh
-proto run bun -- run test:all                # unit tests and all registered suites
+proto run bun -- run test:all                # unit, server and browser suites
 proto run bun -- run test:server             # server-backed suites and replay privacy
 proto run bun -- run test:suite chat-threads # one suite by name
 ```
@@ -83,6 +83,35 @@ Suites run one at a time and use fake agents. Each gets a fresh folder under
 the system temp directory for data, plugins and CLI configuration. The
 runner removes it on success and prints its path on failure.
 
+- `agent-routing`: Runner host isolation, reloads, channel routing and turn limits.
+- `agent-proxy-server`: sign-in, company management and proxy requests against the Runner and cloud server builds.
+- `ai-profiles-server`: profile management and persistence against both server builds.
+- `starter`: loads all eight plugins and stores a Chat message in a fresh installation.
+- `chat-schema`: upgrades the legacy Chat schema and reads the original assistant message after restart.
+- `measure-first-text` (opt-in): measures time to first text with replay agents.
+- `measure-linux-memory` (opt-in, Linux only): samples Runner plugin host memory from `/proc`.
+
+The Runner and cloud Vitest suites build the cloud server and plugin host on
+demand. Set `TOKAMAK_CLOUD_SERVER_BIN` and `TOKAMAK_CLOUD_PLUGIN_HOST_BIN` to
+use prebuilt cloud binaries. Run the measurements by name; neither runs in
+`test:all` or `test:server`.
+
+The browser suite builds these plugins and serves a production build of the
+Tokamak app. It uses Node.js for Playwright. Install Chromium and WebKit once
+from the linked Tokamak checkout, then run the suite from this repository:
+
+```sh
+(cd "${TOKAMAK_DIR:-../tokamak}" && proto run bun -- x playwright install --no-shell chromium webkit)
+proto run bun -- run test:e2e
+proto run bun -- run test:suite browser -- chat.spec.ts --project=chromium
+```
+
+On Linux add `--with-deps` to the Playwright install command. The default runs
+both Chromium and WebKit with one worker. Ports 1420, 1421, 43123 and 43124 must
+be free; set `TOKAMAK_E2E_PORT` to override 1420. Set `TOKAMAK_SCREENS` to an
+output directory to enable the screenshot specs. Failure traces and the HTML
+report are under `.ci-results/playwright*`.
+
 ## Sync from Tokamak
 
 ```sh
@@ -93,10 +122,10 @@ TOKAMAK_DIR=/path/to/tokamak ./scripts/sync-from-tokamak.sh --tests  # shared te
 
 The script mirrors the tracked source and design notes, including deletions.
 It preserves local manifests and configurations, and prints the source commit.
-Review and commit the diff after each sync. To refresh the server suites, run
-`--tests` for the drivers, fixtures and fake-agent harness, and sync the
-`claude codex` plugins for their own drivers. Both commands rewrite the copied
-imports for this repository.
+Review and commit the diff after each sync. Run `--tests` to refresh the
+shared drivers, fixtures, browser specs and fake-agent harness. Sync the
+`claude codex agent-proxy ai-profiles` plugins for their own tests. Both
+commands rewrite the copied imports for this repository.
 
 ## Layout
 

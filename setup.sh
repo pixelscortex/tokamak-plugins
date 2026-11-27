@@ -75,6 +75,7 @@ links=(
   "@solidjs/web" "packages/build/node_modules/@solidjs/web"
   "tailwindcss" "packages/ui/node_modules/tailwindcss"
   "vite" "node_modules/vite"
+  "@playwright/test" "node_modules/@playwright/test"
   "@types/node" "node_modules/@types/node"
   "typescript" "packages/sdk/node_modules/typescript"
   "vitest" "packages/build/node_modules/vitest"

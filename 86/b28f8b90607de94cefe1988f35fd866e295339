@@ -1,0 +1,25 @@
+AGENTS.md
+  s_ac426f9abda17a::t_54c1cc13e7cb71 29-31
+README.md
+  s_ac426f9abda17a::t_e48405b267a6d0 24-31,127-130
+plugins/hello/src/client/_generated/components.d.ts
+  s_ac426f9abda17a::t_73632925adcec3 9
+setup.sh
+  s_ac426f9abda17a::t_01562c0965dc44 47-54,60-61,81-84,91-93,99-101
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "86b28f8b90607de94cefe1988f35fd866e295339",
+  "prompts": {},
+  "sessions": {
+    "s_ac426f9abda17a": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "89258e94-1020-49eb-a783-345b42c38f01",
+        "model": "claude-opus-5-5"
+      },
+      "human_author": "JustKira <shighgamerhg@gmail.com>"
+    }
+  }
+}

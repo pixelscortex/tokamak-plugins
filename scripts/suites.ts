@@ -92,6 +92,11 @@ async function run(name: string, suite: Suite, extra: string[]) {
       CLAUDE_CONFIG_DIR: join(root, "claude"),
       CODEX_HOME: join(root, "codex"),
     };
+    // A Git override would send the code fixtures' git init/commit to another repository,
+    // and a company override would send agent-proxy's sign-in outside the fake companies.
+    for (const variable of Object.keys(env)) {
+      if (variable.startsWith("GIT_") || variable === "TOKAMAK_AGENT_PROXY_ADDRESSES") delete env[variable];
+    }
     const args = [suite.script];
     if (suite.mode || suite.kind === "browser") {
       const server = binary("server");

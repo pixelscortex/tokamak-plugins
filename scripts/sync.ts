@@ -264,12 +264,14 @@ function syncTests(checkout: string): void {
       throw new Error(`${checkout} has no tracked ${name}`);
     }
   }
+  const copied = new Set<string>();
   for (const from of files) {
     const path = from === routing ? "tests/support/routing.mjs" : from === starter ? "tests/starter.mjs" : roots.reduce(
       (name, [prefix, target]) => name.startsWith(prefix) ? target + name.slice(prefix.length) : name,
       from,
     );
     const to = join(repo, path);
+    copied.add(path);
     const stat = lstatSync(join(checkout, from));
     mkdirSync(destination(dirname(path)), { recursive: true });
     if (stat.isSymbolicLink()) {
@@ -286,7 +288,14 @@ function syncTests(checkout: string): void {
       chmodSync(to, stat.mode & 0o777);
     }
   }
-  console.log(`  shared tests: ${files.length} files copied`);
+  // tests/fake-agent is a pure mirror (no local files), so a tape or agent removed in Tokamak goes here too.
+  const stale = listed(repo, "--cached", "--others", "--exclude-standard", "--", "tests/fake-agent/")
+    .filter((path) => !copied.has(path));
+  for (const path of stale) {
+    const target = destination(path);
+    if (lstatSync(target, { throwIfNoEntry: false })) unlinkSync(target);
+  }
+  console.log(`  shared tests: ${files.length} files copied, ${stale.length} removed`);
 }
 
 function main(): void {

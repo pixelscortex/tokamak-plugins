@@ -1,0 +1,9 @@
+# Streams a reply in two parts and says back the message exactly as it arrived.
+# Holds between the parts until a file named `go` appears in the thread's folder,
+# so a test can look at the turn while it runs.
+{"read": "prompt"}
+{"out": {"type": "text", "delta": "Reading your message."}}
+{"gate": "go"}
+{"out": {"type": "text", "delta": " You wrote: "}}
+{"out": {"type": "text", "delta": {"$": "prompt.text"}}}
+{"out": {"type": "done", "sessionId": "replay-echo-session"}}

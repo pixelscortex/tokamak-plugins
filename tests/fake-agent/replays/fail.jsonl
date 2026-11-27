@@ -1,0 +1,5 @@
+# Starts a reply, then reports an error, as an agent does when it hits a rate limit.
+{"read": "prompt"}
+{"out": {"type": "text", "delta": "Starting"}}
+{"out": {"type": "error", "message": "rate limited"}}
+{"exit": 1}

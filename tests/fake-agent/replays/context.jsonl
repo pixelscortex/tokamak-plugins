@@ -1,0 +1,8 @@
+# Says back what the agent was given for this turn (session, settings and, for
+# a fresh session, the thread's earlier messages), then the message itself,
+# and ends on the session the agent chose.
+{"read": "prompt"}
+{"out": {"type": "text", "delta": {"$": "prompt.context"}}}
+{"out": {"type": "text", "delta": "\nMessage: "}}
+{"out": {"type": "text", "delta": {"$": "prompt.text"}}}
+{"out": {"type": "done", "sessionId": {"$": "prompt.sessionId"}}}

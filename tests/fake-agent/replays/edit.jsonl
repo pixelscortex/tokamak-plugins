@@ -1,0 +1,5 @@
+{"read": "prompt"}
+{"write": "agent.txt", "text": "written by the agent\n"}
+{"out": {"type": "text", "delta": "I edited agent.txt."}}
+{"gate": "go"}
+{"out": {"type": "done", "sessionId": "replay-edit-session"}}

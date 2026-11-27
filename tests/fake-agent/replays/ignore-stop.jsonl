@@ -1,0 +1,7 @@
+{"read":"prompt"}
+{"signals":"ignore"}
+{"grandchild":"process-tree.json"}
+{"out":{"type":"text","delta":"Partial reply from a stuck agent."}}
+{"read":"stop"}
+{"out":{"type":"text","delta":" Stop received."}}
+{"gate":"never-opened"}

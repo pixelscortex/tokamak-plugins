@@ -1,0 +1,7 @@
+# Asks one permission question, then says which answer it got.
+{"read": "prompt"}
+{"out": {"type": "text", "delta": "Checking the branch."}}
+{"ask": {"kind": "command:git push", "action": "run", "subject": "git push origin feat/csv-export"}, "as": "push"}
+{"out": {"type": "text", "delta": " Answer: "}}
+{"out": {"type": "text", "delta": {"$": "push.answer"}}}
+{"out": {"type": "done", "sessionId": "replay-ask-once-session"}}

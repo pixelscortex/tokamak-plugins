@@ -1,0 +1,9 @@
+{"read":"prompt"}
+{"out":{"type":"text","delta":"Ready for steering."}}
+{"read":"steer"}
+{"out":{"type":"text","delta":" Steered: "}}
+{"out":{"type":"text","delta":{"$":"steer.text"}}}
+{"read":"followup"}
+{"out":{"type":"text","delta":" Then: "}}
+{"out":{"type":"text","delta":{"$":"followup.text"}}}
+{"out":{"type":"done","sessionId":"replay-steer-session"}}

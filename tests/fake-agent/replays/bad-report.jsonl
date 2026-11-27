@@ -1,0 +1,7 @@
+# Reports a step of a kind that does not exist, then would work for a minute: ai refuses the
+# report back to the agent, the turn fails, and the program is stopped with it.
+{"read": "prompt"}
+{"out": {"type": "text", "delta": "Starting"}}
+{"out": {"type": "tool", "id": "tool-1", "kind": "teleport", "title": "somewhere", "state": "running"}}
+{"sleep": 60000}
+{"out": {"type": "done", "sessionId": "replay-bad-report-session"}}

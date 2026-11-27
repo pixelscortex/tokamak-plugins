@@ -1,0 +1,24 @@
+# Codex 0.170.0 app-server recording in Ask first; local data removed and unrelated events omitted.
+# Write steps reproduce the disk effects verified during the live run.
+{"read":"init","expect":{"method":"initialize"}}
+{"out":{"id":{"$":"init.id"},"result":{"userAgent":"tokamak/0.170.0 (example-platform)","codexHome":"/example/.codex","platformFamily":"unix","platformOs":"macos"}}}
+{"read":"ready","expect":{"method":"initialized"}}
+{"read":"thread","expect":{"method":"thread/start","params":{"sandbox":"workspace-write","approvalPolicy":"untrusted","approvalsReviewer":"user"}}}
+{"out":{"id":{"$":"thread.id"},"result":{"model":"gpt-6.2-sol","reasoningEffort":"low","thread":{"id":"codex-session","parentThreadId":null,"agentRole":null,"preview":""}}}}
+{"out":{"method":"thread/started","params":{"thread":{"id":"codex-session","parentThreadId":null,"agentRole":null,"preview":""}}}}
+{"read":"turn","expect":{"method":"turn/start","params":{"threadId":"codex-session","input":[{"type":"text","text":"Use the shell tool once to run `printf %s tokamak-permission > command.txt` in the current folder. Do not use an escalated sandbox or any substitute tool. If declined, do not retry. Then report the outcome.","text_elements":[]}],"effort":"medium"}}}
+{"out":{"id":{"$":"turn.id"},"result":{"turn":{"id":"codex-wire-1","status":"inProgress"}}}}
+{"out":{"method":"turn/started","params":{"threadId":"codex-session","turn":{"id":"codex-wire-1","status":"inProgress"}}}}
+{"out":{"method":"item/started","params":{"threadId":"codex-session","turnId":"codex-wire-1","item":{"type":"agentMessage","id":"codex-item-1","text":"","phase":"commentary"}}}}
+{"out":{"method":"item/completed","params":{"threadId":"codex-session","turnId":"codex-wire-1","item":{"type":"agentMessage","id":"codex-item-1","text":"I’ll run the command once in the current folder and report the result.","phase":"commentary"}}}}
+{"out":{"method":"item/started","params":{"threadId":"codex-session","turnId":"codex-wire-1","item":{"type":"commandExecution","id":"codex-item-2","command":"/bin/zsh -lc 'printf %s tokamak-permission > command.txt'","cwd":"/example/project","source":"agent","status":"inProgress","exitCode":null}}}}
+{"out":{"method":"item/commandExecution/requestApproval","params":{"threadId":"codex-session","turnId":"codex-wire-1","kind":"command","itemId":"codex-item-2","command":"/bin/zsh -lc 'printf %s tokamak-permission > command.txt'","cwd":"/example/project","availableDecisions":["accept",{"acceptWithExecpolicyAmendment":{"execpolicy_amendment":["/bin/zsh","-lc","printf %s tokamak-permission > command.txt"]}},"cancel"]},"id":0}}
+{"read":"answer1","expect":{"id":0,"result":{"decision":"acceptForSession"}}}
+{"out":{"method":"serverRequest/resolved","params":{"threadId":"codex-session","requestId":0}}}
+{"write":"command.txt","text":"tokamak-permission"}
+{"out":{"method":"item/completed","params":{"threadId":"codex-session","turnId":"codex-wire-1","item":{"type":"commandExecution","id":"codex-item-2","command":"/bin/zsh -lc 'printf %s tokamak-permission > command.txt'","cwd":"/example/project","source":"unifiedExecStartup","status":"completed","exitCode":0}}}}
+{"out":{"method":"thread/tokenUsage/updated","params":{"threadId":"codex-session","turnId":"codex-wire-1","tokenUsage":{"total":{"inputTokens":16549,"outputTokens":58,"cachedInputTokens":0}}}}}
+{"out":{"method":"item/started","params":{"threadId":"codex-session","turnId":"codex-wire-1","item":{"type":"agentMessage","id":"codex-item-3","text":"","phase":"final_answer"}}}}
+{"out":{"method":"item/completed","params":{"threadId":"codex-session","turnId":"codex-wire-1","item":{"type":"agentMessage","id":"codex-item-3","text":"The command succeeded (exit code `0`) and wrote `tokamak-permission` to `command.txt` in the current folder.","phase":"final_answer"}}}}
+{"out":{"method":"thread/tokenUsage/updated","params":{"threadId":"codex-session","turnId":"codex-wire-1","tokenUsage":{"total":{"inputTokens":33213,"outputTokens":89,"cachedInputTokens":16512}}}}}
+{"out":{"method":"turn/completed","params":{"threadId":"codex-session","turn":{"id":"codex-wire-1","status":"completed"}}}}

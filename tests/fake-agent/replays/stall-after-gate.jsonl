@@ -1,0 +1,8 @@
+# Writes, waits for `go`, writes again, then would work for a minute. A test ends the turn
+# while it waits, so the second write is refused: ai stops the program and fails the turn.
+{"read": "prompt"}
+{"out": {"type": "text", "delta": "Before"}}
+{"gate": "go"}
+{"out": {"type": "text", "delta": " after"}}
+{"sleep": 60000}
+{"out": {"type": "done", "sessionId": "replay-stall-session"}}

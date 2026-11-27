@@ -1,0 +1,5 @@
+{"read": "prompt"}
+{"write": "agent.txt", "text": "edit before stop\n"}
+{"out": {"type": "text", "delta": "I edited agent.txt."}}
+{"read": "stop"}
+{"out": {"type": "done", "sessionId": "replay-edit-stop-session"}}

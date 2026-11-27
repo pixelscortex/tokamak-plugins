@@ -1,0 +1,12 @@
+# Codex edit recording handshake and usage, with a synthetic greeting.
+{"read":"init","expect":{"method":"initialize"}}
+{"out":{"id":{"$":"init.id"},"result":{"userAgent":"tokamak/0.170.0 (example-platform)","codexHome":"/example/.codex","platformFamily":"unix","platformOs":"macos"}}}
+{"read":"ready","expect":{"method":"initialized"}}
+{"read":"thread","expect":{"method":"thread/start","params":{"sandbox":"danger-full-access","approvalPolicy":"never"}}}
+{"out":{"id":{"$":"thread.id"},"result":{"thread":{"id":"codex-session","turns":[]},"model":"gpt-6.1-sol","reasoningEffort":"low"}}}
+{"read":"turn","expect":{"method":"turn/start","params":{"threadId":"codex-session","input":[{"type":"text","text":"Reply only: Hello from Codex."}],"effort":"medium"}}}
+{"out":{"id":{"$":"turn.id"},"result":{"turn":{"id":"codex-edit-turn","rootTurnId":"codex-edit-turn","items":[],"itemsView":"notLoaded","status":"inProgress","error":null,"startedAt":null,"completedAt":null,"durationMs":null}}}}
+{"out":{"method":"turn/started","params":{"threadId":"codex-session","turn":{"id":"codex-edit-turn","rootTurnId":"codex-edit-turn","items":[],"itemsView":"notLoaded","status":"inProgress","error":null,"startedAt":1700000000,"completedAt":null,"durationMs":null}},"emittedAtMs":1700000000000}}
+{"out":{"method":"item/agentMessage/delta","params":{"threadId":"codex-session","turnId":"codex-edit-turn","itemId":"codex-item-2","delta":"Hello from Codex."},"emittedAtMs":1700000000000}}
+{"out":{"method":"thread/tokenUsage/updated","params":{"threadId":"codex-session","turnId":"codex-edit-turn","tokenUsage":{"total":{"totalTokens":18262,"inputTokens":18208,"cachedInputTokens":0,"cacheWriteInputTokens":0,"outputTokens":54,"reasoningOutputTokens":0},"last":{"totalTokens":18262,"inputTokens":18208,"cachedInputTokens":0,"cacheWriteInputTokens":0,"outputTokens":54,"reasoningOutputTokens":0},"modelContextWindow":258400}},"emittedAtMs":1700000000000}}
+{"out":{"method":"turn/completed","params":{"threadId":"codex-session","turn":{"id":"codex-edit-turn","rootTurnId":"codex-edit-turn","items":[],"itemsView":"summary","status":"completed","error":null,"startedAt":1700000000,"completedAt":1700000000,"durationMs":0}},"emittedAtMs":1700000000000}}

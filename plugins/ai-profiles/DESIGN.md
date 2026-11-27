@@ -17,7 +17,7 @@ Paper page: `App 1:1 · AI profiles plugin`. Drawn from the owner's
 
 ## Screens
 
-In flow order, as `e2e/browser/screens.spec.ts` ("profiles screens") takes
+In flow order, as `e2e/browser/plugin-screens.spec.ts` ("profiles screens") takes
 them and as the Paper page lays them out (three rows: adding Claude, adding
 ChatGPT and building profiles, the details and removing).
 
@@ -332,7 +332,7 @@ icon button, `Content`, `Group`, `GroupLabel`, `Item`, `Separator`), `Row`
 trigger through the tooltip's); its own `CompanyMark`, profile box, row and
 drop slot (`ui/profile-box.tsx`), and drag ghost.
 
-How the Paper copies were made: `e2e/browser/screens.spec.ts` ("profiles
+How the Paper copies were made: `e2e/browser/plugin-screens.spec.ts` ("profiles
 screens") takes each screen in the desktop app's window (the test desktop's
 listener waits until cancelled and no return comes, so the sign-in step shows
 the desktop wording and the test pastes);

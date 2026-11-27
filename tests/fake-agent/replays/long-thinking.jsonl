@@ -1,0 +1,18 @@
+# Thinks for more than 1 MiB (12 reports of about 110 KB, with quotes and newlines that grow
+# when escaped), then answers: ai keeps 256 KB of thinking, cut, and the turn still finishes.
+{"read": "prompt"}
+{"out": {"type": "thinking", "delta": {"$repeat": "Weighing the \"cache\" again.\n", "times": 4000}}}
+{"out": {"type": "thinking", "delta": {"$repeat": "Weighing the \"cache\" again.\n", "times": 4000}}}
+{"out": {"type": "thinking", "delta": {"$repeat": "Weighing the \"cache\" again.\n", "times": 4000}}}
+{"out": {"type": "thinking", "delta": {"$repeat": "Weighing the \"cache\" again.\n", "times": 4000}}}
+{"out": {"type": "thinking", "delta": {"$repeat": "Weighing the \"cache\" again.\n", "times": 4000}}}
+{"out": {"type": "thinking", "delta": {"$repeat": "Weighing the \"cache\" again.\n", "times": 4000}}}
+{"out": {"type": "thinking", "delta": {"$repeat": "Weighing the \"cache\" again.\n", "times": 4000}}}
+{"out": {"type": "thinking", "delta": {"$repeat": "Weighing the \"cache\" again.\n", "times": 4000}}}
+{"out": {"type": "thinking", "delta": {"$repeat": "Weighing the \"cache\" again.\n", "times": 4000}}}
+{"out": {"type": "thinking", "delta": {"$repeat": "Weighing the \"cache\" again.\n", "times": 4000}}}
+{"out": {"type": "thinking", "delta": {"$repeat": "Weighing the \"cache\" again.\n", "times": 4000}}}
+{"out": {"type": "thinking", "delta": {"$repeat": "Weighing the \"cache\" again.\n", "times": 4000}}}
+{"out": {"type": "plan", "text": {"$repeat": "- a step of a very long plan\n", "times": 5000}}}
+{"out": {"type": "text", "delta": "Done thinking."}}
+{"out": {"type": "done", "sessionId": "replay-long-thinking-session"}}

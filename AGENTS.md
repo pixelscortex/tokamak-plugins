@@ -31,5 +31,6 @@ app's plugins folder. See `README.md` for setup and install.
   `agent-proxy` and `ai-profiles`. With no IDs it syncs all eight.
 - **Checks.** Run `./install.sh` into a throwaway folder first to generate
   the types for imports between plugins. Then run `bun run check` and
-  `bun run test` with the pinned Bun. Server-backed tests move in TKM-318.
+  `bun run test:all` with the pinned Bun. Use `bun run test:suite <name>`
+  to run a single suite against the setup checkout.
   There is no CI here for now; put what you ran and its result in the PR.

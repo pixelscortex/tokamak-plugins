@@ -1,0 +1,8 @@
+# Thinks, runs a command (its detail stands for the command's output) and answers
+# in one line, so a test can check that only the answer reaches a later history.
+{"read": "prompt"}
+{"out": {"type": "thinking", "delta": "Private thinking about the tests."}}
+{"out": {"type": "tool", "id": "command-1", "kind": "command", "title": "pnpm test", "detail": "22 passed in 9.4s", "state": "running"}}
+{"out": {"type": "tool", "id": "command-1", "kind": "command", "title": "pnpm test", "detail": "22 passed in 9.4s", "state": "done"}}
+{"out": {"type": "text", "delta": "All tests pass."}}
+{"out": {"type": "done", "sessionId": {"$": "prompt.sessionId"}}}

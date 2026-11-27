@@ -1,0 +1,15 @@
+# Asks the same kind of question twice, then another kind, and says each answer.
+# After "Always allow this session" the second question of that kind is not asked
+# again: ai answers it. Cancel on the first question ends the turn there.
+{"read": "prompt"}
+{"ask": {"kind": "command:git push", "action": "run", "subject": "git push origin feat/csv-export"}, "as": "first"}
+{"out": {"type": "text", "delta": "Push: "}}
+{"out": {"type": "text", "delta": {"$": "first.answer"}}}
+{"if": "first.answer", "is": "cancel", "then": [{"out": {"type": "done", "sessionId": "replay-ask-session"}}, {"exit": 0}]}
+{"ask": {"kind": "command:git push", "action": "run", "subject": "git push --tags"}, "as": "second"}
+{"out": {"type": "text", "delta": ". Push again: "}}
+{"out": {"type": "text", "delta": {"$": "second.answer"}}}
+{"ask": {"kind": "edit", "action": "edit", "subject": "src/export.ts"}, "as": "third"}
+{"out": {"type": "text", "delta": ". Edit: "}}
+{"out": {"type": "text", "delta": {"$": "third.answer"}}}
+{"out": {"type": "done", "sessionId": "replay-ask-session"}}

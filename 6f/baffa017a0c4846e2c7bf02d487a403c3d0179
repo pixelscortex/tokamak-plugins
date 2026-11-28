@@ -1,0 +1,27 @@
+.agents/skills/develop-tokamak-plugin/SKILL.md
+  s_1d7ba1ecc7a4e2::t_d76270880e4109 1-144
+.agents/skills/tokamak-design/SKILL.md
+  s_1d7ba1ecc7a4e2::t_70e88ff7e81312 1-92
+.claude/skills/develop-tokamak-plugin
+  s_1d7ba1ecc7a4e2::t_e5cd3ec0552147 1
+.claude/skills/tokamak-design
+  s_1d7ba1ecc7a4e2::t_31af81c96daac6 1
+skills-lock.json
+  s_1d7ba1ecc7a4e2::t_838f14146212dc 1-19
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "6fbaffa017a0c4846e2c7bf02d487a403c3d0179",
+  "prompts": {},
+  "sessions": {
+    "s_1d7ba1ecc7a4e2": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "d83e282b-c690-4f49-8fac-212a44028aae",
+        "model": "unknown"
+      },
+      "human_author": "JustKira <shighgamerhg@gmail.com>"
+    }
+  }
+}

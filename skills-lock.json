@@ -1,0 +1,19 @@
+{
+  "version": 2,
+  "skills": {
+    "develop-tokamak-plugin": {
+      "source": "pixelscortex/tokamak",
+      "commit": "db84d9471b964680fa03c5dab269378275ea5c27",
+      "sourceType": "github",
+      "skillPath": "skills/develop-tokamak-plugin/SKILL.md",
+      "computedHash": "5adcd55c0ac61d258b766830228886045a693bf0d982b317e20732ebffa99a83"
+    },
+    "tokamak-design": {
+      "source": "pixelscortex/tokamak",
+      "commit": "db84d9471b964680fa03c5dab269378275ea5c27",
+      "sourceType": "github",
+      "skillPath": "skills/tokamak-design/SKILL.md",
+      "computedHash": "6d5b56abfafd240e9bbff8cb2bbf4b037ba31bc9a0752e9c39e98d7645b0e912"
+    }
+  }
+}
